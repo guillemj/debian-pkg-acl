@@ -1,0 +1,47 @@
+acl (2.0.8-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Sat, 13 Apr 2002 09:45:06 +1000
+
+acl (2.0.7-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Wed, 10 Apr 2002 09:50:24 +1100
+
+acl (2.0.6-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Mon,  8 Apr 2002 08:56:34 +1100
+
+acl (2.0.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Nathan Scott <nathans@debian.org>  Wed, 27 Mar 2002 08:47:58 +1100
+
+acl (2.0.4-2) unstable; urgency=low
+
+  * Fix attr-dev build dependency issue (closes: #138280)
+
+ -- Nathan Scott <nathans@debian.org>  Fri, 15 Mar 2002 07:08:50 +1100
+
+acl (2.0.4-1) unstable; urgency=low
+
+  * New upstream bugfix release
+
+ -- Nathan Scott <nathans@debian.org>  Tue, 12 Mar 2002 09:47:50 +1100
+
+acl (2.0.2-1) unstable; urgency=low
+
+  * Initial release (closes: #97686)
+  * Uses the official Linux extended attributes interfaces (currently
+     supported by ext2, ext3, and XFS)
+
+ -- Nathan Scott <nathans@debian.org>  Tue, 26 Feb 2002 13:25:26 +1100
+
+Local variables:
+mode: debian-changelog
+End:
