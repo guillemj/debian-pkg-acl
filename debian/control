@@ -2,8 +2,8 @@ Source: acl
 Section: utils
 Priority: optional
 Maintainer: Nathan Scott <nathans@debian.org>
-Build-Depends: autoconf, debmake, libtool, attr-dev (>= 2.0.0)
-Standards-Version: 3.5.5
+Build-Depends: autoconf, debmake, gettext, libtool, libattr1-dev (>= 2.4.4)
+Standards-Version: 3.5.9
 
 Package: acl
 Depends: ${shlibs:Depends}
@@ -12,11 +12,13 @@ Description: Access control list utilities
  This package contains the getfacl and setfacl utilities needed for
  manipulating access control lists.
 
-Package: acl-dev
-Section: devel
+Package: libacl1-dev
+Section: libdevel
 Priority: extra
-Depends: libc6-dev, acl (>= 2.0.0)
-Conflicts: acl (<< 2.0.0)
+Depends: libc6-dev, libacl1 (>= 2.0.0)
+Provides: acl-dev
+Replaces: acl-dev
+Conflicts: acl-dev, acl (<< 2.0.0), kerberos4kth-dev (<< 1.2.2-4)
 Architecture: any
 Description: Access control list static libraries and headers
  This package contains the static libraries and header files needed
@@ -25,9 +27,9 @@ Description: Access control list static libraries and headers
 
 Package: libacl1
 Depends: ${shlibs:Depends}
-Section: utils
-Priority: optional
-Conflicts: acl (<< 2.0.0)
+Section: libs
+Priority: required
+Conflicts: acl (<< 2.0.0), libacl1-kerberos4kth
 Architecture: any
 Description: Access control list shared library
  This package contains the libacl.so dynamic library containing
