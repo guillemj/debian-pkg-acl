@@ -21,6 +21,7 @@ build: built
 built: config
 	@echo "== dpkg-buildpackage: build" 1>&2
 	$(MAKE) default
+	cd po; rm -rf acl.pot; make acl.pot
 	touch built
 
 config: .census

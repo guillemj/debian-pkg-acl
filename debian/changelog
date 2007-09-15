@@ -1,3 +1,17 @@
+acl (2.2.45-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Added homepage
+    - Added myself as comaintainer
+    - Set Standards-Version to 3.7.2
+    - libacl1-dev depends on libacl1 (= ${binary:Version})
+    - acl and libacl1 depend on ${misc:Depends}
+  * debian/rules: Regenerate acl.pot
+  * debian/watch: Added
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 15 Sep 2007 14:28:33 +1000
+
 acl (2.2.42-1) unstable; urgency=low
 
   * New upstream release
