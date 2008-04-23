@@ -1,3 +1,9 @@
+acl (2.2.47-2) unstable; urgency=low
+
+  * Acknowledge NMU. Closes: Closes: #477515
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 24 Apr 2008 06:47:12 +1000
+
 acl (2.2.47-1.1) unstable; urgency=low
 
   * Non-maintainer upload.
