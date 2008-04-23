@@ -3,8 +3,9 @@ Section: utils
 Priority: optional
 Maintainer: Nathan Scott <nathans@debian.org>
 Uploaders: Anibal Monsalve Salazar <anibal@debian.org>
-Build-Depends: autoconf, debhelper (>= 5), gettext, libtool, libattr1-dev (>= 2.4.4)
-Standards-Version: 3.7.2
+Build-Depends: autoconf, debhelper (>= 5), chrpath, gettext, libtool, libattr1-dev (>= 2.4.4)
+Standards-Version: 3.7.3
+Homepage: http://oss.sgi.com/projects/xfs/
 
 Package: acl
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -12,8 +13,6 @@ Architecture: any
 Description: Access control list utilities
  This package contains the getfacl and setfacl utilities needed for
  manipulating access control lists.
- .
-  Homepage: http://oss.sgi.com/projects/xfs/
 
 Package: libacl1-dev
 Section: libdevel
@@ -27,8 +26,6 @@ Description: Access control list static libraries and headers
  This package contains the static libraries and header files needed
  for developing programs which make use of the access control list
  programming interface defined in POSIX 1003.1e draft standard 17.
- .
-  Homepage: http://oss.sgi.com/projects/xfs/
 
 Package: libacl1
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -40,5 +37,3 @@ Description: Access control list shared library
  This package contains the libacl.so dynamic library containing
  the POSIX 1003.1e draft standard 17 functions for manipulating
  access control lists.
- .
-  Homepage: http://oss.sgi.com/projects/xfs/

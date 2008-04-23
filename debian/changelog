@@ -1,3 +1,22 @@
+acl (2.2.47-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/watch
+  * Remove empty directories. Closes: #445902, #222534
+  * Fix the following lintian issues:
+    W: acl source: package-uses-deprecated-debhelper-compat-version 1
+    W: acl source: out-of-date-standards-version 3.7.2 (current is 3.7.3)
+    W: libacl1-dev: package-contains-empty-directory usr/share/doc/acl/
+    W: libacl1-dev: description-contains-homepage
+    W: libacl1: package-contains-empty-directory usr/share/doc/acl/
+    W: libacl1: description-contains-homepage
+    W: acl: description-contains-homepage
+    W: acl: binary-or-shlib-defines-rpath ./usr/bin/chacl /lib64
+    W: acl: binary-or-shlib-defines-rpath ./usr/bin/getfacl /lib64
+    W: acl: binary-or-shlib-defines-rpath ./usr/bin/setfacl /lib64
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Wed, 23 Apr 2008 21:48:29 +1000
+
 acl (2.2.45-1) unstable; urgency=low
 
   * New upstream release
