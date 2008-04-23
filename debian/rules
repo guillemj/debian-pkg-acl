@@ -52,9 +52,6 @@ binary-arch: checkroot built
 	$(pkgme)  $(MAKE) -C build src-manifest
 	rmdir debian/libacl1-dev/usr/share/doc/acl
 	rmdir debian/libacl1/usr/share/doc/acl
-	chrpath --delete debian/acl/usr/bin/chacl
-	chrpath --delete debian/acl/usr/bin/getfacl
-	chrpath --delete debian/acl/usr/bin/setfacl
 	dh_installdocs
 	dh_installchangelogs
 	dh_strip
