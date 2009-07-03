@@ -1,3 +1,11 @@
+acl (2.2.47-3) unstable; urgency=low
+
+  * DH compatibility level is 7
+  * Fix out-of-date-standards-version
+  * Fix incorrect-libdir-in-la-file 
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 03 Jul 2009 20:44:21 +1000
+
 acl (2.2.47-2) unstable; urgency=low
 
   * Acknowledge NMU. Closes: Closes: #477515

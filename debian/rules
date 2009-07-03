@@ -50,6 +50,8 @@ binary-arch: checkroot built
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C build src-manifest
+	sed "s/^libdir='\/lib'$$/libdir='\/usr\/lib'/" $(dirdev)/usr/lib/libacl.la > $(dirdev)/usr/lib/libacl.la.new
+	mv $(dirdev)/usr/lib/libacl.la.new $(dirdev)/usr/lib/libacl.la
 	rmdir debian/libacl1-dev/usr/share/doc/acl
 	rmdir debian/libacl1/usr/share/doc/acl
 	dh_installdocs
