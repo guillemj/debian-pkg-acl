@@ -1,3 +1,15 @@
+acl (2.2.48-1) unstable; urgency=low
+
+  * New upstream release 
+  * Fix out-of-date-standards-version
+  * Update homepage in debian/control
+  * Add Vcs-Git and Vcs-Browser to debian/control
+  * Update download page in debian/copyright
+  * Update debian/watch
+  * Add automake as a build-dependency
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 25 Aug 2009 10:29:59 +1000
+
 acl (2.2.47-3) unstable; urgency=low
 
   * DH compatibility level is 7
@@ -8,7 +20,7 @@ acl (2.2.47-3) unstable; urgency=low
 
 acl (2.2.47-2) unstable; urgency=low
 
-  * Acknowledge NMU. Closes: Closes: #477515
+  * Acknowledge NMU. Closes: #477515
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 24 Apr 2008 06:47:12 +1000
 

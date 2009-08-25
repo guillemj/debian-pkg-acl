@@ -1,2 +1,2 @@
 version=3
-ftp://oss.sgi.com/projects/xfs/cmd_tars/ acl_([\d]+[\d\.]*)-[\d].tar.gz
+http://mirror.its.uidaho.edu/pub/savannah/acl/ acl-([\d]+[\d\.]*).src.tar.gz
