@@ -38,7 +38,7 @@ clean:
 	-rm -f built .census
 	$(MAKE) distclean
 	-rm -rf $(dirme) $(dirdev) $(dirlib)
-	-rm -f debian/*substvars debian/files* debian/*.debhelper
+	-rm -f debian/*substvars debian/files* debian/*.debhelper changelog
 
 binary-indep:
 
@@ -54,7 +54,8 @@ binary-arch: checkroot built
 	mv $(dirdev)/usr/lib/libacl.la.new $(dirdev)/usr/lib/libacl.la
 	rmdir debian/libacl1-dev/usr/share/doc/acl
 	rmdir debian/libacl1/usr/share/doc/acl
-	dh_installdocs
+	cp -p doc/CHANGES changelog
+	dh_installdocs -A changelog
 	dh_installchangelogs
 	dh_strip
 	dh_compress
@@ -64,7 +65,6 @@ binary-arch: checkroot built
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
-
 	dh_md5sums
 	dh_builddeb
 

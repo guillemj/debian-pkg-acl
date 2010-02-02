@@ -1,3 +1,18 @@
+acl (2.2.49-2) unstable; urgency=low
+
+  * Debian source format is 3.0 (quilt)
+    Add 01-Makefile.patch
+  * Fix CVE-2009-4411
+    Refer to https://savannah.nongnu.org/bugs/?28131
+    Add 02-499076-physical-walk.patch
+    Patch by Markus Steinborn
+    Closes: 499076
+  * Fix debhelper-but-no-misc-depends
+  * Fix out-of-date-standards-version
+  * Fix no-upstream-changelog
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 02 Feb 2010 11:40:55 +1100
+
 acl (2.2.49-1) unstable; urgency=low
 
   * New upstream release 
