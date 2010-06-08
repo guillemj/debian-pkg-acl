@@ -1,12 +1,13 @@
-From d539830d19b35df0c12c0b7d36c1f6c428f34a91 Mon Sep 17 00:00:00 2001
-From: M. Steinborn <gnugv_maintainer@yahoo.de>
-Date: Fri, 22 Jan 2010 22:37:04 +0000
-Subject: setfacl: make sure that -R only calls stat(2) on symlinks when it needs to
+commit d539830d19b35df0c12c0b7d36c1f6c428f34a91
+Author: M. Steinborn <gnugv_maintainer@yahoo.de>
+Date:   Fri Jan 22 14:37:04 2010 -0800
 
-Fixes http://savannah.nongnu.org/bugs/?28131
+    setfacl: make sure that -R only calls stat(2) on symlinks when it needs to
+    
+    Fixes http://savannah.nongnu.org/bugs/?28131
+    
+    Signed-off-by: Brandon Philips <bphilips@suse.de>
 
-Signed-off-by: Brandon Philips <bphilips@suse.de>
----
 diff --git a/setfacl/setfacl.c b/setfacl/setfacl.c
 index 802f060..731e417 100644
 --- a/setfacl/setfacl.c
