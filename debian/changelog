@@ -1,3 +1,9 @@
+acl (2.2.49-4) unstable; urgency=low
+
+  * Migrate to having binaries in sbindir (closes: #590240)
+
+ -- Nathan Scott <nathans@debian.org>  Wed, 28 Jul 2010 22:15:20 +1000
+
 acl (2.2.49-3) unstable; urgency=low
 
   * Add upstream patches 
