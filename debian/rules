@@ -15,8 +15,17 @@ pkglib = DIST_ROOT=`pwd`/$(dirlib); export DIST_ROOT;
 stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
-	  INSTALL_USER=root INSTALL_GROUP=root ;
+	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/bash;
 checkdir = test -f debian/rules
+
+# Ensure cross builds succeed
+DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+  LOCAL_CONFIGURE_OPTIONS += --build $(DEB_HOST_GNU_TYPE)
+else
+  LOCAL_CONFIGURE_OPTIONS += --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
+endif
 
 build: built
 built: config
@@ -29,7 +38,7 @@ config: .census
 .census:
 	@echo "== dpkg-buildpackage: configure" 1>&2
 	$(checkdir)
-	$(options) $(MAKE) configure
+	$(options) $(MAKE) configure LOCAL_CONFIGURE_OPTIONS="$(LOCAL_CONFIGURE_OPTIONS)"
 	touch .census
 
 clean:
@@ -50,8 +59,8 @@ binary-arch: checkroot built
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C build src-manifest
-	sed "s/^libdir='\/lib'$$/libdir='\/usr\/lib'/" $(dirdev)/usr/lib/libacl.la > $(dirdev)/usr/lib/libacl.la.new
-	mv $(dirdev)/usr/lib/libacl.la.new $(dirdev)/usr/lib/libacl.la
+	sed -i -e"s,^libdir='/lib',libdir='/usr/lib',; \
+		/dependency_libs/ s/'.*'/''/" $(dirdev)/usr/lib/libacl.la
 	rmdir debian/libacl1-dev/usr/share/doc/acl
 	rmdir debian/libacl1/usr/share/doc/acl
 	cp -p doc/CHANGES changelog

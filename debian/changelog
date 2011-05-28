@@ -1,3 +1,13 @@
+acl (2.2.49-5) unstable; urgency=medium
+
+  * Add myself as comaintainer
+  * Use bash in build process (Closes: #621929)
+  * Pass host & build to allow cross builds to succeed (Closes: #284167)
+  * Remove references to other libraries from dependency_libs field
+    (Closes: #622409)
+
+ -- Luk Claes <luk@debian.org>  Sat, 28 May 2011 09:10:42 +0200
+
 acl (2.2.49-4) unstable; urgency=low
 
   * Migrate to having binaries in sbindir (closes: #590240)
