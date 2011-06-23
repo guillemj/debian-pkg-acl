@@ -1,3 +1,11 @@
+acl (2.2.51-1) unstable; urgency=low
+
+  * New upstream (Closes: #626623).
+  - All patches were applied upstream, except moving binaries to /bin
+  * Add multiarch support (Closes: #528140).
+
+ -- Luk Claes <luk@debian.org>  Thu, 23 Jun 2011 23:18:55 +0200
+
 acl (2.2.49-5) unstable; urgency=medium
 
   * Add myself as comaintainer

@@ -18,6 +18,9 @@ options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/bash;
 checkdir = test -f debian/rules
 
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+LOCAL_CONFIGURE_OPTIONS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+
 # Ensure cross builds succeed
 DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)

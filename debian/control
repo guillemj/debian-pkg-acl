@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Nathan Scott <nathans@debian.org>
 Uploaders: Anibal Monsalve Salazar <anibal@debian.org>, Luk Claes <luk@debian.org>
-Build-Depends: autoconf, automake, debhelper (>= 7), gettext, libtool, libattr1-dev (>= 2.4.4)
+Build-Depends: autoconf, automake, debhelper (>= 8.1.3), gettext, libtool, libattr1-dev (>= 2.4.4)
 Standards-Version: 3.8.4
 Homepage: http://savannah.nongnu.org/projects/acl/
 Vcs-Git: git://git.savannah.nongnu.org/acl.git
@@ -12,6 +12,7 @@ Vcs-Browser: http://git.savannah.gnu.org/cgit/acl.git
 Package: acl
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
+Multi-Arch: foreign
 Description: Access control list utilities
  This package contains the getfacl and setfacl utilities needed for
  manipulating access control lists.
@@ -35,6 +36,8 @@ Section: libs
 Priority: required
 Conflicts: acl (<< 2.0.0), libacl1-kerberos4kth
 Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: Access control list shared library
  This package contains the libacl.so dynamic library containing
  the POSIX 1003.1e draft standard 17 functions for manipulating
