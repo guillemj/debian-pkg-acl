@@ -30,6 +30,8 @@ else
   LOCAL_CONFIGURE_OPTIONS += --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
 endif
 
+build-arch: build
+build-indep: build
 build: built
 built: config
 	@echo "== dpkg-buildpackage: build" 1>&2
@@ -62,8 +64,7 @@ binary-arch: checkroot built
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
 	$(pkgme)  $(MAKE) -C build src-manifest
-	sed -i -e"s,^libdir='/lib',libdir='/usr/lib',; \
-		/dependency_libs/ s/'.*'/''/" $(dirdev)/usr/lib/libacl.la
+	rm -f $(dirdev)/usr/lib/libacl.la
 	rmdir debian/libacl1-dev/usr/share/doc/acl
 	rmdir debian/libacl1/usr/share/doc/acl
 	cp -p doc/CHANGES changelog
@@ -73,12 +74,12 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libacl1 (>= 2.2.11-1)'
+	dh_makeshlibs -p $(library) -V 'libacl1 (>= 2.2.51-2)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
-	dh_builddeb
+	dh_builddeb -- -Zbzip2 -z9
 
 binary: binary-indep binary-arch
 

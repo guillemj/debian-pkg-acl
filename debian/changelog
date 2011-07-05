@@ -1,3 +1,15 @@
+acl (2.2.51-2) unstable; urgency=low
+
+  * Set standards-version to 3.9.2
+  * Build-depend and depend on libattr1-dev >= 2.4.46
+  * Append 'libacl 1 libacl1 (>= 2.2.51-2)' to
+    debian/libacl1/DEBIAN/shlibs
+  * Pass "-Zbzip2 -z9" to dpkg-deb
+  * Don't ship .la files
+  * Fix debian-rules-missing-recommended-target
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 05 Jul 2011 13:23:28 +1000
+
 acl (2.2.51-1) unstable; urgency=low
 
   * New upstream (Closes: #626623).
