@@ -1,3 +1,11 @@
+acl (2.2.51-3) unstable; urgency=medium
+
+  * libacl1: Don't pass "-Zbzip2 -z9" to dpkg-deb
+    Closes: 633782
+  * Don't ship .la files
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sun, 17 Jul 2011 12:58:36 +1000
+
 acl (2.2.51-2) unstable; urgency=low
 
   * Set standards-version to 3.9.2
