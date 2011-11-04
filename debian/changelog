@@ -1,3 +1,12 @@
+acl (2.2.51-4) unstable; urgency=low
+
+  * Fix FTBFS on hurd-i386
+    Add 11-636512-fix-ftbfs4hurd.patch
+    Patch by Svante Signell
+    Closes: 636512
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 04 Nov 2011 12:00:03 +1100
+
 acl (2.2.51-3) unstable; urgency=medium
 
   * libacl1: Don't pass "-Zbzip2 -z9" to dpkg-deb
