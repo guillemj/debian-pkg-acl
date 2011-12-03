@@ -1,3 +1,13 @@
+acl (2.2.51-5) unstable; urgency=low
+
+  * Build if autconf2.13 is installed
+    Add 12-643588-acl-autoconf-version-check.patch
+    Patch by Wookey
+    Closes: 643588
+  * Add Debian epoch version to libattr1-dev dependency
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 03 Dec 2011 22:20:25 +1100
+
 acl (2.2.51-4) unstable; urgency=low
 
   * Fix FTBFS on hurd-i386

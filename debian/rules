@@ -75,7 +75,7 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libacl1 (>= 2.2.51-4)'
+	dh_makeshlibs -p $(library) -V 'libacl1 (>= 2.2.51-5)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
