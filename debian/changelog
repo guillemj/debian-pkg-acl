@@ -1,3 +1,22 @@
+acl (2.2.51-6) unstable; urgency=low
+
+  * Merge 2.2.51-5ubuntu1
+    - Build-depend on gettext:any, since we only need it to run tools at
+      build-time.
+  * Use /bin/sh as CONFIG_SHELL in debian/rules
+    Closes: #671987
+  * Fix out-of-date-standards-version
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 10 May 2012 13:04:03 +1000
+
+acl (2.2.51-5ubuntu1) precise; urgency=low
+
+  * Merge from Debian testing, remaining changes:
+    - Build-depend on gettext:any, since we only need it to run tools at
+      build-time.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 17 Dec 2011 19:04:30 -0800
+
 acl (2.2.51-5) unstable; urgency=low
 
   * Build if autconf2.13 is installed
@@ -8,6 +27,14 @@ acl (2.2.51-5) unstable; urgency=low
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 03 Dec 2011 22:20:25 +1100
 
+acl (2.2.51-4ubuntu1) precise; urgency=low
+
+  * Merge from Debian testing, remaining changes:
+    - Build-depend on gettext:any, since we only need it to run tools at
+      build-time.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 14 Nov 2011 21:30:21 -0800
+
 acl (2.2.51-4) unstable; urgency=low
 
   * Fix FTBFS on hurd-i386
@@ -16,6 +43,13 @@ acl (2.2.51-4) unstable; urgency=low
     Closes: 636512
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 04 Nov 2011 12:00:03 +1100
+
+acl (2.2.51-3ubuntu1) precise; urgency=low
+
+  * Build-depend on gettext:any, since we only need it to run tools at
+    build-time.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 05 Nov 2011 17:34:39 +0000
 
 acl (2.2.51-3) unstable; urgency=medium
 
@@ -63,7 +97,7 @@ acl (2.2.49-4) unstable; urgency=low
 
 acl (2.2.49-3) unstable; urgency=low
 
-  * Add upstream patches 
+  * Add upstream patches
     03-re-stat_file_after_chown.patch
     04-print_useful_error_from_read_acl_comments.patch
     05-restore_crash_on_malformed_input.patch
@@ -89,13 +123,13 @@ acl (2.2.49-2) unstable; urgency=low
 
 acl (2.2.49-1) unstable; urgency=low
 
-  * New upstream release 
+  * New upstream release
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 24 Nov 2009 21:39:57 +1100
 
 acl (2.2.48-1) unstable; urgency=low
 
-  * New upstream release 
+  * New upstream release
   * Fix out-of-date-standards-version
   * Update homepage in debian/control
   * Add Vcs-Git and Vcs-Browser to debian/control
@@ -109,7 +143,7 @@ acl (2.2.47-3) unstable; urgency=low
 
   * DH compatibility level is 7
   * Fix out-of-date-standards-version
-  * Fix incorrect-libdir-in-la-file 
+  * Fix incorrect-libdir-in-la-file
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 03 Jul 2009 20:44:21 +1000
 
@@ -445,6 +479,3 @@ acl (2.0.2-1) unstable; urgency=low
 
  -- Nathan Scott <nathans@debian.org>  Tue, 26 Feb 2002 13:25:26 +1100
 
-Local variables:
-mode: debian-changelog
-End:

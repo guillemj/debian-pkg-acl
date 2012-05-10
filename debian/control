@@ -3,8 +3,8 @@ Section: utils
 Priority: optional
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Uploaders: Nathan Scott <nathans@debian.org>, Luk Claes <luk@debian.org>
-Build-Depends: autoconf, automake, debhelper (>= 8.1.3), gettext, libtool, libattr1-dev (>= 1:2.4.46)
-Standards-Version: 3.9.2
+Build-Depends: autoconf, automake, debhelper (>= 8.1.3), gettext:any, libtool, libattr1-dev (>= 1:2.4.46)
+Standards-Version: 3.9.3
 Homepage: http://savannah.nongnu.org/projects/acl/
 Vcs-Git: git://git.savannah.nongnu.org/acl.git
 Vcs-Browser: http://git.savannah.gnu.org/cgit/acl.git

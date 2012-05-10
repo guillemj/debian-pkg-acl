@@ -15,7 +15,7 @@ pkglib = DIST_ROOT=`pwd`/$(dirlib); export DIST_ROOT;
 stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
-	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/bash;
+	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/sh;
 checkdir = test -f debian/rules
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
@@ -75,7 +75,7 @@ binary-arch: checkroot built
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -N $(library)
-	dh_makeshlibs -p $(library) -V 'libacl1 (>= 2.2.51-5)'
+	dh_makeshlibs -p $(library) -V 'libacl1 (>= 2.2.51-6)'
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
