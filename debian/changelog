@@ -1,3 +1,14 @@
+acl (2.2.51-7) unstable; urgency=low
+
+  * Build-depend on gettext. If it build-depends on gettext:any, the
+    auto-builders stop with the message below.
+    Dependency installability problem for acl on armel, armhf, hurd-i386,
+    kfreebsd-amd64, kfreebsd-i386, mips, powerpc, s390, s390x and sparc:
+    acl (= 2.2.51-6) build-depends on missing:
+    - not-existing-build-dependency-for-any
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 11 May 2012 19:06:24 +1000
+
 acl (2.2.51-6) unstable; urgency=low
 
   * Merge 2.2.51-5ubuntu1
