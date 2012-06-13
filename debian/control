@@ -3,14 +3,14 @@ Section: utils
 Priority: optional
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Uploaders: Nathan Scott <nathans@debian.org>, Luk Claes <luk@debian.org>
-Build-Depends: autoconf, automake, debhelper (>= 8.1.3), gettext, libtool, libattr1-dev (>= 1:2.4.46-7)
+Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autoconf, automake, gettext, libtool, libattr1-dev (>= 1:2.4.46-8)
 Standards-Version: 3.9.3
 Homepage: http://savannah.nongnu.org/projects/acl/
 Vcs-Git: git://git.savannah.nongnu.org/acl.git
 Vcs-Browser: http://git.savannah.gnu.org/cgit/acl.git
 
 Package: acl
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libacl1 (= ${binary:Version})
 Architecture: any
 Multi-Arch: foreign
 Description: Access control list utilities
@@ -20,7 +20,7 @@ Description: Access control list utilities
 Package: libacl1-dev
 Section: libdevel
 Priority: extra
-Depends: ${misc:Depends}, libc6-dev | libc-dev, libacl1 (= ${binary:Version}), libattr1-dev (>= 1:2.4.46-7)
+Depends: ${misc:Depends}, libc6-dev | libc-dev, libacl1 (= ${binary:Version}), libattr1-dev (>= 1:2.4.46-8)
 Provides: acl-dev
 Replaces: acl-dev
 Conflicts: acl-dev, acl (<< 2.0.0), kerberos4kth-dev (<< 1.2.2-4)

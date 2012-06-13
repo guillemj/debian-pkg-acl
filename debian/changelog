@@ -1,3 +1,11 @@
+acl (2.2.51-8) unstable; urgency=low
+
+  * Enable hardening build flags 
+    Closes: #673998
+  * DH compatibility level is 9
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Wed, 13 Jun 2012 18:08:12 +1000
+
 acl (2.2.51-7) unstable; urgency=low
 
   * Build-depend on gettext. If it build-depends on gettext:any, the
