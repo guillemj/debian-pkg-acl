@@ -48,6 +48,8 @@ config: .census
 .census:
 	@echo "== dpkg-buildpackage: configure" 1>&2
 	$(checkdir)
+	-test -r /usr/share/misc/config.sub && cp -f /usr/share/misc/config.sub config.sub
+	-test -r /usr/share/misc/config.guess && cp -f /usr/share/misc/config.guess config.guess
 	$(options) $(MAKE) configure LOCAL_CONFIGURE_OPTIONS="$(LOCAL_CONFIGURE_OPTIONS)"
 	touch .census
 
@@ -68,7 +70,7 @@ binary-arch: checkroot built
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
-	$(pkgme)  $(MAKE) -C build src-manifest
+	$(pkgme)  $(MAKE) -C package src-manifest
 	rm -f $(dirdev)/usr/lib/libacl.la
 	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libacl.la
 	rmdir debian/libacl1-dev/usr/share/doc/acl

@@ -1,3 +1,21 @@
+acl (2.2.52-1) unstable; urgency=low
+
+  * New upstream release 2.2.52 
+  * Standards Version is 3.9.4
+  * Update debian/rules
+    Upstream renamed build/ to package/
+  * Upstream renamed configure.in to configure.ac and didn't ship it.
+    Add 01-configure.in.patch
+  * Fix missing ldflags
+    Add 02-687535-fix-missing-ldflags.patch
+    Patch by Simon Ruderich
+    Closes: #687535
+  * autoconf update for arm64 building
+    Closes: #689610
+  * Update debian/watch
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 21 May 2013 09:39:24 +1000
+
 acl (2.2.51-8) unstable; urgency=low
 
   * Enable hardening build flags 
