@@ -1,3 +1,12 @@
+acl (2.2.52-1.1) unstable; urgency=high
+
+  * Non-maintainer upload to fix the installer.
+  * Use default compression for binary packages to fix the debian
+    installer (Closes: #751633).  Patch by  Ansgar Burchardt.
+  * Remove Luk Claes as uploader on his request (Closes: #748492).
+
+ -- Petter Reinholdtsen <pere@debian.org>  Thu, 28 Aug 2014 21:45:22 +0200
+
 acl (2.2.52-1) unstable; urgency=low
 
   * New upstream release 2.2.52 

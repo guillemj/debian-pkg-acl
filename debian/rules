@@ -87,9 +87,7 @@ binary-arch: checkroot built
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
-	dh_builddeb -p$(package) -- -Zbzip2 -z9
-	dh_builddeb -p$(develop) -- -Zbzip2 -z9
-	dh_builddeb -p$(library)
+	dh_builddeb
 
 binary: binary-indep binary-arch
 
