@@ -1,5 +1,7 @@
---- a/configure.in	2013-05-21 17:28:33.271565688 +1000
-+++ b/configure.in	2013-05-21 08:38:52.000000000 +1000
+Index: acl-2.2.52/configure.in
+===================================================================
+--- /dev/null
++++ acl-2.2.52/configure.in
 @@ -0,0 +1,49 @@
 +# Copyright (C) 2009  Andreas Gruenbacher <agruen@suse.de>
 +#

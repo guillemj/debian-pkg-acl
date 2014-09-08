@@ -1,3 +1,13 @@
+acl (2.2.52-2) unstable; urgency=medium
+
+  * ACK NMU.
+    Closes: #759591.
+  * Standards-Version: 3.9.5.
+  * Refresh patches.
+  * Really remove Luk Claes as uploader.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 08 Sep 2014 07:29:24 +0100
+
 acl (2.2.52-1.1) unstable; urgency=high
 
   * Non-maintainer upload to fix the installer.

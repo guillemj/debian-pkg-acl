@@ -1,7 +1,9 @@
 http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=590240
 
---- acl-2.2.49.orig/getfacl/Makefile
-+++ acl-2.2.49/getfacl/Makefile
+Index: acl-2.2.52/getfacl/Makefile
+===================================================================
+--- acl-2.2.52.orig/getfacl/Makefile
++++ acl-2.2.52/getfacl/Makefile
 @@ -32,5 +32,11 @@ include $(BUILDRULES)
  
  install: default
@@ -14,8 +16,10 @@ http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=590240
 +	$(LTINSTALL) -S $(PKG_SBIN_DIR)/$(LTCOMMAND) $(PKG_BIN_DIR)/$(LTCOMMAND)
 +endif
  install-dev install-lib:
---- acl-2.2.49.orig/setfacl/Makefile
-+++ acl-2.2.49/setfacl/Makefile
+Index: acl-2.2.52/setfacl/Makefile
+===================================================================
+--- acl-2.2.52.orig/setfacl/Makefile
++++ acl-2.2.52/setfacl/Makefile
 @@ -32,5 +32,11 @@ include $(BUILDRULES)
  
  install: default
@@ -28,8 +32,10 @@ http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=590240
 +	$(LTINSTALL) -S $(PKG_SBIN_DIR)/$(LTCOMMAND) $(PKG_BIN_DIR)/$(LTCOMMAND)
 +endif
  install-dev install-lib:
---- acl-2.2.49.orig/chacl/Makefile
-+++ acl-2.2.49/chacl/Makefile
+Index: acl-2.2.52/chacl/Makefile
+===================================================================
+--- acl-2.2.52.orig/chacl/Makefile
++++ acl-2.2.52/chacl/Makefile
 @@ -31,5 +31,11 @@ include $(BUILDRULES)
  
  install: default
