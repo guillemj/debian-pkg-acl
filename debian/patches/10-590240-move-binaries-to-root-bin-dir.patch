@@ -4,7 +4,7 @@ Index: acl-2.2.52/getfacl/Makefile
 ===================================================================
 --- acl-2.2.52.orig/getfacl/Makefile
 +++ acl-2.2.52/getfacl/Makefile
-@@ -32,5 +32,11 @@ include $(BUILDRULES)
+@@ -32,5 +32,10 @@ include $(BUILDRULES)
  
  install: default
  	$(INSTALL) -m 755 -d $(PKG_BIN_DIR)
@@ -13,14 +13,13 @@ Index: acl-2.2.52/getfacl/Makefile
 +else
 +	$(INSTALL) -m 755 -d $(PKG_SBIN_DIR)
 +	$(LTINSTALL) -m 755 $(LTCOMMAND) $(PKG_SBIN_DIR)
-+	$(LTINSTALL) -S $(PKG_SBIN_DIR)/$(LTCOMMAND) $(PKG_BIN_DIR)/$(LTCOMMAND)
 +endif
  install-dev install-lib:
 Index: acl-2.2.52/setfacl/Makefile
 ===================================================================
 --- acl-2.2.52.orig/setfacl/Makefile
 +++ acl-2.2.52/setfacl/Makefile
-@@ -32,5 +32,11 @@ include $(BUILDRULES)
+@@ -32,5 +32,10 @@ include $(BUILDRULES)
  
  install: default
  	$(INSTALL) -m 755 -d $(PKG_BIN_DIR)
@@ -29,14 +28,13 @@ Index: acl-2.2.52/setfacl/Makefile
 +else
 +	$(INSTALL) -m 755 -d $(PKG_SBIN_DIR)
 +	$(LTINSTALL) -m 755 $(LTCOMMAND) $(PKG_SBIN_DIR)
-+	$(LTINSTALL) -S $(PKG_SBIN_DIR)/$(LTCOMMAND) $(PKG_BIN_DIR)/$(LTCOMMAND)
 +endif
  install-dev install-lib:
 Index: acl-2.2.52/chacl/Makefile
 ===================================================================
 --- acl-2.2.52.orig/chacl/Makefile
 +++ acl-2.2.52/chacl/Makefile
-@@ -31,5 +31,11 @@ include $(BUILDRULES)
+@@ -31,5 +31,10 @@ include $(BUILDRULES)
  
  install: default
  	$(INSTALL) -m 755 -d $(PKG_BIN_DIR)
@@ -45,6 +43,5 @@ Index: acl-2.2.52/chacl/Makefile
 +else
 +	$(INSTALL) -m 755 -d $(PKG_SBIN_DIR)
 +	$(LTINSTALL) -m 755 $(LTCOMMAND) $(PKG_SBIN_DIR)
-+	$(LTINSTALL) -S $(PKG_SBIN_DIR)/$(LTCOMMAND) $(PKG_BIN_DIR)/$(LTCOMMAND)
 +endif
  install-dev install-lib:

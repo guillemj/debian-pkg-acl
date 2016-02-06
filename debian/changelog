@@ -1,3 +1,12 @@
+acl (2.2.52-3) unstable; urgency=medium
+
+  [ Marco d'Itri ]
+  * Non-maintainer upload.
+  * Create the /usr/bin/*acl compatibility symlinks in postinst to support
+    merged /usr systems. (Closes: #767925)
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 06 Feb 2016 22:10:44 +0000
+
 acl (2.2.52-2) unstable; urgency=medium
 
   * ACK NMU.
