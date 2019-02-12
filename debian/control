@@ -1,13 +1,12 @@
 Source: acl
 Section: utils
 Priority: optional
-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Uploaders: Nathan Scott <nathans@debian.org>
+Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autotools-dev, autoconf, automake, gettext, libtool, libattr1-dev (>= 1:2.4.46-8)
 Standards-Version: 3.9.5
 Homepage: http://savannah.nongnu.org/projects/acl/
-Vcs-Git: git://git.savannah.nongnu.org/acl.git
-Vcs-Browser: http://git.savannah.gnu.org/cgit/acl.git
+Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/acl.git
+Vcs-Git: https://git.hadrons.org/git/debian/pkgs/acl.git
 
 Package: acl
 Depends: ${shlibs:Depends}, ${misc:Depends}, libacl1 (= ${binary:Version})
