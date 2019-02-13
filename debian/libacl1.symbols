@@ -2,9 +2,9 @@ libacl.so.1 libacl1 #MINVER#
  ACL_1.0@ACL_1.0 2.2.23
  ACL_1.1@ACL_1.1 2.2.23
  ACL_1.2@ACL_1.2 2.2.51
- __acl_extended_file@Base 2.2.51
- __acl_from_xattr@Base 2.2.23
- __acl_to_xattr@Base 2.2.23
+ (optional)__acl_extended_file@Base 2.2.51
+ (optional)__acl_from_xattr@Base 2.2.23
+ (optional)__acl_to_xattr@Base 2.2.23
  acl_add_perm@ACL_1.0 2.2.23
  acl_calc_mask@ACL_1.0 2.2.23
  acl_check@ACL_1.0 2.2.23
@@ -44,11 +44,11 @@ libacl.so.1 libacl1 #MINVER#
  acl_to_any_text@ACL_1.0 2.2.23
  acl_to_text@ACL_1.0 2.2.23
  acl_valid@ACL_1.0 2.2.23
- closed@Base 2.2.47
- head@Base 2.2.47
- high_water_alloc@Base 2.2.23
- next_line@Base 2.2.35
- num_dir_handles@Base 2.2.47
+ (optional)closed@Base 2.2.47
+ (optional)head@Base 2.2.47
+ (optional)high_water_alloc@Base 2.2.23
+ (optional)next_line@Base 2.2.35
+ (optional)num_dir_handles@Base 2.2.47
  perm_copy_fd@ACL_1.1 2.2.23
  perm_copy_file@ACL_1.1 2.2.23
- walk_tree@Base 2.2.47
+ (optional)walk_tree@Base 2.2.47

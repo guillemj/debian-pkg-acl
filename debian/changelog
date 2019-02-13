@@ -39,6 +39,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
   * Switch to Standards-Version 4.3.0.
   * Add a shared library symbols file. Closes: #677570
     Thanks to Daniel Kahn Gillmor <dkg@fifthhorseman.net>.
+  * Mark private symbols as (optional) in symbols file.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
