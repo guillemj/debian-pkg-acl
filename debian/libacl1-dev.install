@@ -2,5 +2,4 @@ lib/*/*.a
 lib/*/*.so
 usr/include/acl/
 usr/include/sys/
-usr/lib/*.a
 usr/share/man/man3/

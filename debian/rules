@@ -11,7 +11,10 @@ include /usr/share/dpkg/buildflags.mk
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  CONFIG_SHELL=/bin/sh;
 
-confflags += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+confflags += \
+  --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+  --libexecdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+  $(nil)
 
 # Ensure cross builds succeed
 ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))

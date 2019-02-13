@@ -41,6 +41,7 @@ Replaces:
 Conflicts:
  acl-dev,
 Architecture: any
+Multi-Arch: same
 Description: Access control list static libraries and headers
  This package contains the static libraries and header files needed
  for developing programs which make use of the access control list

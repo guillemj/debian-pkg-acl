@@ -34,6 +34,8 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Remove now autotools-dev Build-Depends, depended by debhelper.
   * Set Rules-Requires-Root to no, and stop setting INSTALL_USER and
     INSTALL_GROUP, as the build system will default to the current user.
+  * Install static library into an arch-qualified path, and set
+    Multi-Arch:same for libacl1-dev package. Closes: #731292
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
