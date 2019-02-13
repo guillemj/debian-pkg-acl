@@ -26,6 +26,9 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Do not create an upstream source tarball distribution.
     - Remove unused stdenv variable.
     - Use dh_installchangelogs instead of juggling doc/CHANGES around.
+    - Use dh_install, dh_installdocs, dh_installman and dh_link instead of
+      calling the upstream build system multiple times to install into the
+      package dirs.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
