@@ -23,7 +23,7 @@ Depends:
  libacl1 (= ${binary:Version}),
 Architecture: any
 Multi-Arch: foreign
-Description: Access control list utilities
+Description: access control list utilities
  This package contains the getfacl and setfacl utilities needed for
  manipulating access control lists.
 
@@ -42,7 +42,7 @@ Conflicts:
  acl-dev,
 Architecture: any
 Multi-Arch: same
-Description: Access control list static libraries and headers
+Description: access control list - static libraries and headers
  This package contains the static libraries and header files needed
  for developing programs which make use of the access control list
  programming interface defined in POSIX 1003.1e draft standard 17.
@@ -56,7 +56,6 @@ Architecture: any
 Pre-Depends:
  ${misc:Pre-Depends},
 Multi-Arch: same
-Description: Access control list shared library
- This package contains the libacl.so dynamic library containing
- the POSIX 1003.1e draft standard 17 functions for manipulating
- access control lists.
+Description: access control list - shared library
+ This package contains the shared library containing the POSIX 1003.1e
+ draft standard 17 functions for manipulating access control lists.
