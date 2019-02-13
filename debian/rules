@@ -9,7 +9,7 @@ DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
-	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/sh;
+	  CONFIG_SHELL=/bin/sh;
 
 LOCAL_CONFIGURE_OPTIONS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 

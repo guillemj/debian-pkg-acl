@@ -2,6 +2,7 @@ Source: acl
 Section: utils
 Priority: optional
 Maintainer: Guillem Jover <guillem@debian.org>
+Rules-Requires-Root: no
 Build-Depends:
  dpkg-dev (>= 1.16.1~),
  debhelper (>= 11),
