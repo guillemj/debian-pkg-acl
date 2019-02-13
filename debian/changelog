@@ -50,6 +50,8 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Install the libacl.txt and extensions.txt into the libacl1-dev package.
     - Fix typo for “setgid” in man page. Closes: #774612
     - Fix typo for “ACL_OTHER” in man page. Closes: #787841
+  * Add a simple compile/link/execute autopkgtest for dynamic and static
+    linking. Thanks to Simon McVittie <smcv@debian.org>.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 

@@ -1,0 +1,40 @@
+#!/bin/sh
+
+set -e
+exec 2>&1
+set -u
+set -x
+
+cd "$AUTOPKGTEST_TMP"
+cat >example.c <<'EOF'
+#include <sys/types.h>
+#include <sys/acl.h>
+
+#include <err.h>
+#include <stddef.h>
+
+int
+main(void)
+{
+    acl_t acl;
+
+    acl = acl_init(42);
+    if (acl == NULL)
+        err(1, "unable to allocate an ACL");
+
+    if (acl_free(acl) != 0)
+        err(1, "unable to free ACL %p", acl);
+
+    return 0;
+}
+EOF
+
+gcc -o example example.c -lacl
+test -x ./example
+./example
+
+# XXX: Until libacl gets pkg-config support, library users are presumably
+# just expected to know that it needs libattr.
+gcc -o example-static example.c -lacl -lattr
+test -x ./example-static
+./example-static

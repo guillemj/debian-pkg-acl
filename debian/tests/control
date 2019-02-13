@@ -1,0 +1,3 @@
+Tests: test-build
+Restrictions: superficial
+Depends: build-essential, libacl1-dev
