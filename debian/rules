@@ -51,7 +51,6 @@ clean:
 	dh_testdir
 	-rm -f built .census
 	$(MAKE) distclean
-	rm -f changelog
 	dh_clean
 
 binary-indep:
@@ -67,9 +66,8 @@ binary-arch: built
 	
 	rm -f $(dirdev)/usr/lib/libacl.la
 	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libacl.la
-	cp -p doc/CHANGES changelog
-	dh_installdocs -A changelog
-	dh_installchangelogs
+	dh_installdocs
+	dh_installchangelogs doc/CHANGES
 	dh_strip
 	dh_compress
 	dh_fixperms

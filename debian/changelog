@@ -25,6 +25,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Use dh_clean instead of ad-hoc cleaning.
     - Do not create an upstream source tarball distribution.
     - Remove unused stdenv variable.
+    - Use dh_installchangelogs instead of juggling doc/CHANGES around.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
