@@ -1,6 +1,7 @@
 ---
  man/man1/getfacl.1 |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ man/man5/acl.5     |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 --- a/man/man1/getfacl.1
 +++ b/man/man1/getfacl.1
@@ -13,3 +14,14 @@
  .SH AUTHOR
  Andreas Gruenbacher,
  .RI < a.gruenbacher@bestbits.at >.
+--- a/man/man5/acl.5
++++ b/man/man5/acl.5
+@@ -109,7 +109,7 @@ to the permissions of the ACL_USER_OBJ e
+ entry, the group permissions correspond to the permissions of the
+ ACL_MASK entry.  Otherwise, if the ACL has no ACL_MASK entry, the group
+ permissions correspond to the permissions of the ACL_GROUP_OBJ entry.
+-The other permissions correspond to the permissions of the ACL_OTHER_OBJ
++The other permissions correspond to the permissions of the ACL_OTHER
+ entry.
+ .Pp
+ The file owner, group, and other permissions always match the
