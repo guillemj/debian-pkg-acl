@@ -1,3 +1,4 @@
+00-no-debian-Makefile.patch
 01-configure.in.patch
 02-687535-fix-missing-ldflags.patch
 10-590240-move-binaries-to-root-bin-dir.patch

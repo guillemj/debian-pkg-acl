@@ -73,8 +73,6 @@ binary-arch: checkroot built
 	$(pkgme)  $(MAKE) -C package src-manifest
 	rm -f $(dirdev)/usr/lib/libacl.la
 	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libacl.la
-	rmdir debian/libacl1-dev/usr/share/doc/acl
-	rmdir debian/libacl1/usr/share/doc/acl
 	cp -p doc/CHANGES changelog
 	dh_installdocs -A changelog
 	dh_installchangelogs
