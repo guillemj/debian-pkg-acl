@@ -7,6 +7,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Add patch to avoid upstream Makefile entering the debian/ directory.
   * Update upstream URL (https) in debian/watch file.
   * Update debian/watch to format version 4.
+  * Line-wrap and add a trailing comma to dependency field values.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
