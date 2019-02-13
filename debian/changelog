@@ -45,6 +45,9 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
   * Improve a bit the package descriptions.
   * Remove ancient versioned dpkg-dev Build-Depends.
   * Reorganize binary package fields.
+  * Cleanup documentation installed:
+    - Stop installing irrelevant documents in the acl package. Closes: #508896
+    - Install the libacl.txt and extensions.txt into the libacl1-dev package.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
