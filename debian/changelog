@@ -1,4 +1,4 @@
-acl (2.2.52-4) UNRELEASED; urgency=medium
+acl (2.2.52-4) unstable; urgency=medium
 
   * Salvage package, with ok from co-maintainer.
     Thanks for all their past work on this package. Closes: #921974
@@ -56,7 +56,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
   * Perform a proper and correct /usr-merge transition by moving the library
     package contents from / to /usr.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
+ -- Guillem Jover <guillem@debian.org>  Wed, 13 Feb 2019 04:10:57 +0100
 
 acl (2.2.52-3) unstable; urgency=medium
 
