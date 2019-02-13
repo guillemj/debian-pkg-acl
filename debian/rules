@@ -12,8 +12,8 @@ options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  CONFIG_SHELL=/bin/sh;
 
 confflags += \
-  --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-  --libexecdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+  --libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
+  --libexecdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
   $(nil)
 
 # Ensure cross builds succeed

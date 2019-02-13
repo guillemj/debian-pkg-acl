@@ -52,6 +52,8 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Fix typo for “ACL_OTHER” in man page. Closes: #787841
   * Add a simple compile/link/execute autopkgtest for dynamic and static
     linking. Thanks to Simon McVittie <smcv@debian.org>.
+  * Perform a proper and correct /usr-merge transition by moving the library
+    package contents from / to /usr.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
