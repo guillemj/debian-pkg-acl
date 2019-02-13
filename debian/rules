@@ -57,8 +57,10 @@ clean:
 
 binary-indep:
 
-binary-arch: checkroot built
+binary-arch: built
 	dh_testdir
+	dh_testroot
+	
 	-rm -rf $(dirme) $(dirdev) $(dirlib)
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
@@ -82,7 +84,4 @@ binary-arch: checkroot built
 
 binary: binary-indep binary-arch
 
-checkroot:
-	test 0 -eq `id -u`
-
-.PHONY: binary binary-arch binary-indep clean checkroot
+.PHONY: binary binary-arch binary-indep clean
