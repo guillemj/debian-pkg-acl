@@ -13,6 +13,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Remove original packaging information, present in the changelog.
     - Switch to machine parseable format 1.0.
     - Update copyright statements.
+  * Remove ancient Conflicts against acl, kerberos4kth packages.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 

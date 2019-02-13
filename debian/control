@@ -41,8 +41,6 @@ Replaces:
  acl-dev,
 Conflicts:
  acl-dev,
- acl (<< 2.0.0),
- kerberos4kth-dev (<< 1.2.2-4),
 Architecture: any
 Description: Access control list static libraries and headers
  This package contains the static libraries and header files needed
@@ -55,9 +53,6 @@ Depends:
  ${misc:Depends},
 Section: libs
 Priority: required
-Conflicts:
- acl (<< 2.0.0),
- libacl1-kerberos4kth,
 Architecture: any
 Pre-Depends:
  ${misc:Pre-Depends},
