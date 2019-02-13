@@ -22,7 +22,6 @@ stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/sh;
-checkdir = test -f debian/rules
 
 LOCAL_CONFIGURE_OPTIONS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 
@@ -43,14 +42,14 @@ built: config
 
 config: .census
 .census:
-	$(checkdir)
+	dh_testdir
 	-test -r /usr/share/misc/config.sub && cp -f /usr/share/misc/config.sub config.sub
 	-test -r /usr/share/misc/config.guess && cp -f /usr/share/misc/config.guess config.guess
 	$(options) $(MAKE) configure LOCAL_CONFIGURE_OPTIONS="$(LOCAL_CONFIGURE_OPTIONS)"
 	touch .census
 
 clean:
-	$(checkdir)
+	dh_testdir
 	-rm -f built .census
 	$(MAKE) distclean
 	-rm -rf $(dirme) $(dirdev) $(dirlib)
@@ -59,7 +58,7 @@ clean:
 binary-indep:
 
 binary-arch: checkroot built
-	$(checkdir)
+	dh_testdir
 	-rm -rf $(dirme) $(dirdev) $(dirlib)
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
