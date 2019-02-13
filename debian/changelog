@@ -5,6 +5,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - The updated Vcs fields point to the Debian packaging. Closes: #909308
   * Remove debian/Makefile and stop removing doc dirs from debian/rules.
     - Add patch to avoid upstream Makefile entering the debian/ directory.
+  * Update upstream URL (https) in debian/watch file.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
