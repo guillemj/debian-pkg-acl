@@ -1,0 +1,15 @@
+---
+ man/man1/getfacl.1 |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/man/man1/getfacl.1
++++ b/man/man1/getfacl.1
+@@ -162,7 +162,7 @@ If the environment variable POSIXLY_CORR
+ option is given. If no command line parameter is given,
+ .I getfacl
+ behaves as if it was invoked as ``getfacl \-''.
+-No flags comments indicating the setuid, setgit, and sticky bits are generated.
++No flags comments indicating the setuid, setgid, and sticky bits are generated.
+ .SH AUTHOR
+ Andreas Gruenbacher,
+ .RI < a.gruenbacher@bestbits.at >.
