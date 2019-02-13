@@ -16,18 +16,20 @@ Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/acl.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/acl.git
 
 Package: acl
+Architecture: any
+Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libacl1 (= ${binary:Version}),
-Architecture: any
-Multi-Arch: foreign
 Description: access control list utilities
  This package contains the getfacl and setfacl utilities needed for
  manipulating access control lists.
 
 Package: libacl1-dev
 Section: libdevel
+Architecture: any
+Multi-Arch: same
 Depends:
  ${misc:Depends},
  libc6-dev | libc-dev,
@@ -39,22 +41,20 @@ Replaces:
  acl-dev,
 Conflicts:
  acl-dev,
-Architecture: any
-Multi-Arch: same
 Description: access control list - static libraries and headers
  This package contains the static libraries and header files needed
  for developing programs which make use of the access control list
  programming interface defined in POSIX 1003.1e draft standard 17.
 
 Package: libacl1
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Section: libs
-Architecture: any
-Pre-Depends:
- ${misc:Pre-Depends},
-Multi-Arch: same
 Description: access control list - shared library
  This package contains the shared library containing the POSIX 1003.1e
  draft standard 17 functions for manipulating access control lists.

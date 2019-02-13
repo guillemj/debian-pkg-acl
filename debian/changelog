@@ -42,6 +42,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
   * Mark private symbols as (optional) in symbols file.
   * Improve a bit the package descriptions.
   * Remove ancient versioned dpkg-dev Build-Depends.
+  * Reorganize binary package fields.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
