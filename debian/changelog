@@ -15,6 +15,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Update copyright statements.
   * Remove ancient Conflicts against acl, kerberos4kth packages.
   * Remove obsolete Priority extra.
+  * Remove Priority required from shared library package.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
