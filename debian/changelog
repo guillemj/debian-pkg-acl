@@ -16,6 +16,8 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
   * Remove ancient Conflicts against acl, kerberos4kth packages.
   * Remove obsolete Priority extra.
   * Remove Priority required from shared library package.
+  * Cleanup debian/rules:
+    - Use $(CURDIR) instead of `pwd`.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 

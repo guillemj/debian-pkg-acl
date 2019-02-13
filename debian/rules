@@ -15,9 +15,9 @@ library = lib$(package)1
 dirme  = debian/$(package)
 dirdev = debian/$(develop)
 dirlib = debian/$(library)
-pkgme  = DIST_ROOT=`pwd`/$(dirme);  export DIST_ROOT;
-pkgdev = DIST_ROOT=`pwd`/$(dirdev); export DIST_ROOT;
-pkglib = DIST_ROOT=`pwd`/$(dirlib); export DIST_ROOT;
+pkgme  = DIST_ROOT=$(CURDIR)/$(dirme);  export DIST_ROOT;
+pkgdev = DIST_ROOT=$(CURDIR)/$(dirdev); export DIST_ROOT;
+pkglib = DIST_ROOT=$(CURDIR)/$(dirlib); export DIST_ROOT;
 stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
