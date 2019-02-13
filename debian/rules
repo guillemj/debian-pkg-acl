@@ -18,7 +18,6 @@ dirlib = debian/$(library)
 pkgme  = DIST_ROOT=$(CURDIR)/$(dirme);  export DIST_ROOT;
 pkgdev = DIST_ROOT=$(CURDIR)/$(dirdev); export DIST_ROOT;
 pkglib = DIST_ROOT=$(CURDIR)/$(dirlib); export DIST_ROOT;
-stdenv = @GZIP=-q; export GZIP;
 
 options = export DEBUG=-DNDEBUG DISTRIBUTION=debian \
 	  INSTALL_USER=root INSTALL_GROUP=root CONFIG_SHELL=/bin/sh;
