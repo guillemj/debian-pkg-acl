@@ -18,6 +18,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
   * Remove Priority required from shared library package.
   * Cleanup debian/rules:
     - Use $(CURDIR) instead of `pwd`.
+    - Remove phase prints and comment out DH_VERBOSE, make is verbose enough.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 

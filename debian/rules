@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
@@ -39,14 +39,12 @@ build-arch: build
 build-indep: build
 build: built
 built: config
-	@echo "== dpkg-buildpackage: build" 1>&2
 	$(MAKE) default
 	cd po; rm -rf acl.pot; make acl.pot
 	touch built
 
 config: .census
 .census:
-	@echo "== dpkg-buildpackage: configure" 1>&2
 	$(checkdir)
 	-test -r /usr/share/misc/config.sub && cp -f /usr/share/misc/config.sub config.sub
 	-test -r /usr/share/misc/config.guess && cp -f /usr/share/misc/config.guess config.guess
@@ -54,7 +52,6 @@ config: .census
 	touch .census
 
 clean:
-	@echo "== dpkg-buildpackage: clean" 1>&2
 	$(checkdir)
 	-rm -f built .census
 	$(MAKE) distclean
@@ -64,7 +61,6 @@ clean:
 binary-indep:
 
 binary-arch: checkroot built
-	@echo "== dpkg-buildpackage: binary-arch" 1>&2
 	$(checkdir)
 	-rm -rf $(dirme) $(dirdev) $(dirlib)
 	$(pkgme)  $(MAKE) -C . install
