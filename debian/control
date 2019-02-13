@@ -29,7 +29,6 @@ Description: Access control list utilities
 
 Package: libacl1-dev
 Section: libdevel
-Priority: extra
 Depends:
  ${misc:Depends},
  libc6-dev | libc-dev,
