@@ -29,6 +29,8 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
     - Use dh_install, dh_installdocs, dh_installman and dh_link instead of
       calling the upstream build system multiple times to install into the
       package dirs.
+  * Switch to debhelper compatibility level 11.
+    - Remove now autotools-dev Build-Depends, depended by debhelper.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Feb 2019 22:53:54 +0100
 
