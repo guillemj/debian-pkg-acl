@@ -65,7 +65,7 @@ binary-arch: built
 	$(pkgme)  $(MAKE) -C . install
 	$(pkgdev) $(MAKE) -C . install-dev
 	$(pkglib) $(MAKE) -C . install-lib
-	$(pkgme)  $(MAKE) -C package src-manifest
+	
 	rm -f $(dirdev)/usr/lib/libacl.la
 	rm -f $(dirdev)/lib/$(DEB_HOST_MULTIARCH)/libacl.la
 	cp -p doc/CHANGES changelog
