@@ -30,6 +30,7 @@ acl (2.2.52-4) UNRELEASED; urgency=medium
       calling the upstream build system multiple times to install into the
       package dirs.
     - Rename LOCAL_CONFIGURE_OPTIONS to confflags.
+    - Use $(MAKE) instead of hard-coding the make command.
   * Switch to debhelper compatibility level 11.
     - Remove now autotools-dev Build-Depends, depended by debhelper.
   * Set Rules-Requires-Root to no, and stop setting INSTALL_USER and

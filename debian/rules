@@ -28,7 +28,7 @@ build-indep: build
 build: built
 built: config
 	$(MAKE) default
-	cd po; rm -rf acl.pot; make acl.pot
+	cd po; rm -rf acl.pot; $(MAKE) acl.pot
 	touch built
 
 config: .census
