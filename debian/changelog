@@ -5,6 +5,7 @@ acl (2.2.52-5) UNRELEASED; urgency=medium
     - Fix expected test results, and ls command output.
   * Hook the upstream test suite into both the package build and autopkgtest.
     For now ignore failures, and mark it as superficial.
+  * Fix several more typos in the man pages.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 16 Feb 2019 03:20:41 +0100
 
