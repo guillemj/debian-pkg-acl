@@ -1,3 +1,11 @@
 Tests: test-build
 Restrictions: superficial
 Depends: build-essential, libacl1-dev
+
+Tests: test-func
+Restrictions: superficial rw-build-tree
+Depends: acl
+
+Tests: test-func-root
+Restrictions: superficial rw-build-tree needs-root
+Depends: acl

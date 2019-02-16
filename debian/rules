@@ -32,6 +32,13 @@ built: config
 	$(MAKE) -C po acl.pot
 	touch built
 
+check: built
+	dh_testdir
+	
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) -C test tests || true
+endif
+
 config: .census
 .census:
 	dh_testdir
@@ -47,7 +54,7 @@ clean:
 
 binary-indep:
 
-binary-arch: built
+binary-arch: check
 	dh_testdir
 	dh_testroot
 	
