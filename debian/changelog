@@ -98,7 +98,7 @@ acl (2.2.52-1.1) unstable; urgency=high
 
 acl (2.2.52-1) unstable; urgency=low
 
-  * New upstream release 2.2.52 
+  * New upstream release 2.2.52
   * Standards Version is 3.9.4
   * Update debian/rules
     Upstream renamed build/ to package/
@@ -116,7 +116,7 @@ acl (2.2.52-1) unstable; urgency=low
 
 acl (2.2.51-8) unstable; urgency=low
 
-  * Enable hardening build flags 
+  * Enable hardening build flags
     Closes: #673998
   * DH compatibility level is 9
 
@@ -613,4 +613,3 @@ acl (2.0.2-1) unstable; urgency=low
      supported by ext2, ext3, and XFS)
 
  -- Nathan Scott <nathans@debian.org>  Tue, 26 Feb 2002 13:25:26 +1100
-
