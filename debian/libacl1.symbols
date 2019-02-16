@@ -1,4 +1,5 @@
 libacl.so.1 libacl1 #MINVER#
+* Build-Depends-Package: libacl1-dev
  ACL_1.0@ACL_1.0 2.2.23
  ACL_1.1@ACL_1.1 2.2.23
  ACL_1.2@ACL_1.2 2.2.51
