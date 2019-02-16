@@ -1,3 +1,9 @@
+Description: Add file omitted from upstream source distribution
+Author: Anibal Monsalve Salazar <anibal@debian.org>
+Origin: vendor
+Forwarded: no
+Last-Update: 2013-05-21
+
 Index: acl-2.2.52/configure.in
 ===================================================================
 --- /dev/null

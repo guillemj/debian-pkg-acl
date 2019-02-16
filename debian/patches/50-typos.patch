@@ -1,3 +1,9 @@
+Description: Typo fixes
+Author: Guillem Jover <guillem@debian.org>
+Origin: vendor
+Forwarded: no
+Last-Update: 2019-02-16
+
 ---
  man/man1/chacl.1         |    8 ++++----
  man/man1/getfacl.1       |    2 +-

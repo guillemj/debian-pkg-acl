@@ -1,3 +1,9 @@
+Description: Do not enter the debian directory from the upstream build system
+Author: Guillem Jover <guillem@debian.org>
+Origin: vendor
+Forwarded: no
+Last-Update: 2019-02-13
+
 ---
  Makefile |    2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
