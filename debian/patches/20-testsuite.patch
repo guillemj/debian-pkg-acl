@@ -1,0 +1,250 @@
+Description: Fix test suite
+Author: Guillem Jover <guillem@debian.org>
+Origin: vendor
+Forwarded: no
+Last-Update: 2019-02-16
+
+--- acl-2.2.52.orig/test/cp.test
++++ acl-2.2.52/test/cp.test
+@@ -9,7 +9,7 @@ The cp utility should only copy ACLs if
+ 	> -rw-rw-r--+
+ 	
+ 	$ cp f g
+-	$ ls -l g | awk -- '{ print $1 }' | sed 's/\.$//g'
++	$ ls -l g | awk -- '{ print $1 }'
+ 	> -rw-r--r--
+ 	
+ 	$ rm g
+--- acl-2.2.52.orig/test/misc.test
++++ acl-2.2.52/test/misc.test
+@@ -79,8 +79,8 @@ Multiple users
+ 
+ 	$ getfacl --omit-header f
+ 	> user::rw-
+-	> user:bin:rw-
+ 	> user:daemon:r--
++	> user:bin:rw-
+ 	> group::r--
+ 	> mask::rw-
+ 	> other::r--
+@@ -94,8 +94,8 @@ Multiple groups
+ 
+ 	$ getfacl --omit-header f
+ 	> user::rw-
+-	> user:bin:rw-
+ 	> user:daemon:r--
++	> user:bin:rw-
+ 	> group::r--
+ 	> group:daemon:r--
+ 	> group:users:rw-
+@@ -111,8 +111,8 @@ Remove one group
+ 
+ 	$ getfacl --omit-header f
+ 	> user::rw-
+-	> user:bin:rw-
+ 	> user:daemon:r--
++	> user:bin:rw-
+ 	> group::r--
+ 	> group:daemon:r--
+ 	> mask::rw-
+@@ -146,8 +146,8 @@ Default ACL
+ 
+ 	$ getfacl --omit-header d
+ 	> user::rwx
+-	> user:bin:rwx
+ 	> user:daemon:rw-
++	> user:bin:rwx
+ 	> group::r-x
+ 	> mask::rwx
+ 	> other::---
+@@ -236,16 +236,16 @@ Add some users and groups
+ 
+ 	$ getfacl --omit-header d/d
+ 	> user::rwx
+-	> user:bin:rwx	#effective:r-x
+ 	> user:daemon:r-x
++	> user:bin:rwx	#effective:r-x
+ 	> group::r-x
+ 	> group:daemon:rwx	#effective:r-x
+ 	> group:users:r-x
+ 	> mask::r-x
+ 	> other::---
+ 	> default:user::rwx
+-	> default:user:bin:rwx	#effective:r-x
+ 	> default:user:daemon:r-x
++	> default:user:bin:rwx	#effective:r-x
+ 	> default:group::r-x
+ 	> default:mask::r-x
+ 	> default:other::---
+@@ -254,7 +254,7 @@ Add some users and groups
+ Symlink in directory with default ACL?
+ 	 
+ 	$ ln -s d d/l
+-	$ ls -dl d/l | awk '{print $1}' | sed 's/\.$//g'
++	$ ls -dl d/l | awk '{print $1}'
+ 	> lrwxrwxrwx
+ 
+ 	$ ls -dl -L d/l | awk '{print $1}'
+@@ -262,16 +262,16 @@ Symlink in directory with default ACL?
+ 
+ 	$ getfacl --omit-header d/l
+ 	> user::rwx
+-	> user:bin:rwx	#effective:r-x
+ 	> user:daemon:r-x
++	> user:bin:rwx	#effective:r-x
+ 	> group::r-x
+ 	> group:daemon:rwx	#effective:r-x
+ 	> group:users:r-x
+ 	> mask::r-x
+ 	> other::---
+ 	> default:user::rwx
+-	> default:user:bin:rwx	#effective:r-x
+ 	> default:user:daemon:r-x
++	> default:user:bin:rwx	#effective:r-x
+ 	> default:group::r-x
+ 	> default:mask::r-x
+ 	> default:other::---
+@@ -287,16 +287,16 @@ Does mask manipulation work?
+ 
+ 	$ getfacl --omit-header d/d
+ 	> user::rwx
+-	> user:bin:r-x
+ 	> user:daemon:r-x
++	> user:bin:r-x
+ 	> group::r-x
+ 	> group:daemon:r-x
+ 	> group:users:r-x
+ 	> mask::r-x
+ 	> other::---
+ 	> default:user::rwx
+-	> default:user:bin:rwx	#effective:r-x
+ 	> default:user:daemon:r-x
++	> default:user:bin:rwx	#effective:r-x
+ 	> default:group::r-x
+ 	> default:mask::r-x
+ 	> default:other::---
+@@ -308,16 +308,16 @@ Does mask manipulation work?
+ 
+ 	$ getfacl --omit-header d/d
+ 	> user::rwx
+-	> user:bin:r-x
+ 	> user:daemon:r-x
++	> user:bin:r-x
+ 	> group::r-x
+ 	> group:daemon:r-x
+ 	> group:users:r-x
+ 	> mask::r-x
+ 	> other::---
+ 	> default:user::rwx
+-	> default:user:bin:rwx
+ 	> default:user:daemon:r-x
++	> default:user:bin:rwx
+ 	> default:group::r-x
+ 	> default:mask::rwx
+ 	> default:other::---
+@@ -333,8 +333,8 @@ Remove the default ACL
+ 
+ 	$ getfacl --omit-header d
+ 	> user::rwx
+-	> user:bin:rwx
+ 	> user:daemon:rw-
++	> user:bin:rwx
+ 	> group::r-x
+ 	> mask::rwx
+ 	> other::---
+@@ -343,7 +343,7 @@ Remove the default ACL
+ Reset to base entries
+ 	 
+ 	$ setfacl -b d
+-	$ ls -dl d | awk '{print $1}' | sed 's/\.$//g'
++	$ ls -dl d | awk '{print $1}'
+ 	> drwxr-x---
+ 
+ 	$ getfacl --omit-header d
+@@ -355,7 +355,7 @@ Reset to base entries
+ Now, chmod should change the group_obj entry
+ 	 
+ 	$ chmod 775 d
+-	$ ls -dl d | awk '{print $1}' | sed 's/\.$//g'
++	$ ls -dl d | awk '{print $1}'
+ 	> drwxrwxr-x
+ 	
+ 	$ getfacl --omit-header d
+@@ -373,14 +373,14 @@ Now, chmod should change the group_obj e
+ 
+ 	$ getfacl --omit-header d
+ 	> user::rwx
+-	> user:bin:r-x
+ 	> user:daemon:rwx
++	> user:bin:r-x
+ 	> group::rwx
+ 	> mask::rwx
+ 	> other::r-x
+ 	> default:user::rwx
+-	> default:user:bin:r-x
+ 	> default:user:daemon:rwx
++	> default:user:bin:r-x
+ 	> default:group::rwx
+ 	> default:mask::rwx
+ 	> default:other::r-x
+@@ -392,14 +392,14 @@ Now, chmod should change the group_obj e
+ 
+ 	$ getfacl --omit-header d
+ 	> user::rwx
+-	> user:bin:r-x
+ 	> user:daemon:rwx	#effective:r-x
++	> user:bin:r-x
+ 	> group::rwx	#effective:r-x
+ 	> mask::r-x
+ 	> other::---
+ 	> default:user::rwx
+-	> default:user:bin:r-x
+ 	> default:user:daemon:rwx
++	> default:user:bin:r-x
+ 	> default:group::rwx
+ 	> default:mask::rwx
+ 	> default:other::r-x
+@@ -411,14 +411,14 @@ Now, chmod should change the group_obj e
+ 
+ 	$ getfacl --omit-header d
+ 	> user::rwx
+-	> user:bin:r-x
+ 	> user:daemon:rwx	#effective:r-x
++	> user:bin:r-x
+ 	> group::rwx	#effective:r-x
+ 	> mask::r-x
+ 	> other::---
+ 	> default:user::rwx
+-	> default:user:bin:r-x
+ 	> default:user:daemon:rwx
++	> default:user:bin:r-x
+ 	> default:group::rwx
+ 	> default:mask::rwx
+ 	> default:other::r-x
+--- acl-2.2.52.orig/test/run
++++ acl-2.2.52/test/run
+@@ -70,7 +70,7 @@ for (;;) {
+   if (defined $line) {
+     # Substitute %VAR and %{VAR} with environment variables.
+     $line =~ s[%(\w+)][$ENV{$1}]eg;
+-    $line =~ s[%{(\w+)}][$ENV{$1}]eg;
++    $line =~ s[%\{(\w+)\}][$ENV{$1}]eg;
+   }
+   if (defined $line) {
+     if ($line =~ s/^\s*< ?//) {
+--- acl-2.2.52.orig/test/sbits-restore.test
++++ acl-2.2.52/test/sbits-restore.test
+@@ -13,10 +13,10 @@ Ensure setting of SUID/SGID/sticky via -
+ 	$ touch d/g
+ 	$ touch d/u
+ 	$ setfacl --restore d.acl
+-	$ ls -dl d | awk '{print $1}' | sed 's/\.$//g'
++	$ ls -dl d | awk '{print $1}'
+ 	> drwxr-xr-t
+-	$ ls -dl d/u | awk '{print $1}' | sed 's/\.$//g'
++	$ ls -dl d/u | awk '{print $1}'
+ 	> -rwSr--r--
+-	$ ls -dl d/g | awk '{print $1}' | sed 's/\.$//g'
++	$ ls -dl d/g | awk '{print $1}'
+ 	> -rw-r-Sr--
+ 	$ rm -Rf d

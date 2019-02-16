@@ -1,3 +1,11 @@
+acl (2.2.52-5) UNRELEASED; urgency=medium
+
+  * Fix upstream test suite:
+    - Fix perl warning due to deprecated regex construct.
+    - Fix expected test results, and ls command output.
+
+ -- Guillem Jover <guillem@debian.org>  Sat, 16 Feb 2019 03:20:41 +0100
+
 acl (2.2.52-4) unstable; urgency=medium
 
   * Salvage package, with ok from co-maintainer.
