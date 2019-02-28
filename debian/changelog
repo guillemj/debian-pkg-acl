@@ -22,6 +22,8 @@ acl (2.2.53-1) UNRELEASED; urgency=medium
   * Enable all hardening build flags.
   * Mark autopkgtest tests as flaky instead of superficial, they do not cope
     well with the Debian buildd environment.
+  * Add minimally required build dependencies to autopkgtest Depends fields.
+    Closes: #923470
 
  -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
 
