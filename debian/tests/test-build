@@ -29,12 +29,10 @@ main(void)
 }
 EOF
 
-gcc -o example example.c -lacl
+gcc -o example example.c $(pkg-config --libs libacl)
 test -x ./example
 ./example
 
-# XXX: Until libacl gets pkg-config support, library users are presumably
-# just expected to know that it needs libattr.
-gcc -o example-static example.c -lacl -lattr
+gcc -o example-static example.c $(pkg-config --static --libs libacl)
 test -x ./example-static
 ./example-static
