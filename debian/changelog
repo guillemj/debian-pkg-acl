@@ -1,4 +1,4 @@
-acl (2.2.53-1) UNRELEASED; urgency=medium
+acl (2.2.53-1) unstable; urgency=medium
 
   * New upstream release. Closes: #912337
     - Add upstream signing key, and modify debian/watch file to fetch and
@@ -28,7 +28,7 @@ acl (2.2.53-1) UNRELEASED; urgency=medium
   * Document --restore=- in setfacl(1). Closes: #544716
   * Document in package description that chacl is also provided.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
+ -- Guillem Jover <guillem@debian.org>  Fri, 01 Mar 2019 00:35:02 +0100
 
 acl (2.2.52-5) unstable; urgency=medium
 
