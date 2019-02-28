@@ -26,6 +26,7 @@ acl (2.2.53-1) UNRELEASED; urgency=medium
     Closes: #923470
   * Add a reference to mount(8) in acl(5) SEE ALSO section. Closes: #304764
   * Document --restore=- in setfacl(1). Closes: #544716
+  * Document in package description that chacl is also provided.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
 

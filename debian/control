@@ -22,9 +22,10 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libacl1 (= ${binary:Version}),
-Description: access control list utilities
+Description: access control list - utilities
  This package contains the getfacl and setfacl utilities needed for
- manipulating access control lists.
+ manipulating access control lists. It also contains the chacl IRIX
+ compatible utility.
 
 Package: libacl1-dev
 Section: libdevel
