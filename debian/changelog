@@ -20,6 +20,8 @@ acl (2.2.53-1) UNRELEASED; urgency=medium
     - Update debian/copyright file.
   * Include new pkg-config file.
   * Enable all hardening build flags.
+  * Mark autopkgtest tests as flaky instead of superficial, they do not cope
+    well with the Debian buildd environment.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
 
