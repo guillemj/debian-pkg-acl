@@ -24,6 +24,7 @@ acl (2.2.53-1) UNRELEASED; urgency=medium
     well with the Debian buildd environment.
   * Add minimally required build dependencies to autopkgtest Depends fields.
     Closes: #923470
+  * Add a reference to mount(8) in acl(5) SEE ALSO section. Closes: #304764
 
  -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
 
