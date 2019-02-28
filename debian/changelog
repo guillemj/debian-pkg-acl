@@ -19,6 +19,7 @@ acl (2.2.53-1) UNRELEASED; urgency=medium
     - Update autopkgtests to handle the modernized upstream build system.
     - Update debian/copyright file.
   * Include new pkg-config file.
+  * Enable all hardening build flags.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
 
