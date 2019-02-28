@@ -24,13 +24,15 @@ Comment:
 
 Files:
  exports
- getfacl/*.h
  include/*.h
  libacl/*.c
  libacl/*.h
  libmisc/*.c
- setfacl/*.c
- setfacl/*.h
+ tools/do_set.*
+ tools/parse.*
+ tools/sequence.c
+ tools/setfacl.c
+ tools/user_group.h
 Copyright:
  Copyright © 2001-2002 Silicon Graphics, Inc.
  Copyright © 1999-2003,2007,2009,2011 Andreas Gruenbacher

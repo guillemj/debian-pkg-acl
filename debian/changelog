@@ -1,3 +1,26 @@
+acl (2.2.53-1) UNRELEASED; urgency=medium
+
+  * New upstream release. Closes: #912337
+    - Add upstream signing key, and modify debian/watch file to fetch and
+      check orig tarball signatures.
+    - Refresh patches:
+      + 00-no-debian-Makefile.patch: Remove, fixed upstream.
+      + 01-configure.in.patch: Ditto.
+      + 02-687535-fix-missing-ldflags.patch: Ditto.
+      + 10-590240-move-binaries-to-root-bin-dir.patch: Ditto.
+      + 20-testsuite.patch: Ditto.
+      + 11-636512-fix-ftbfs4hurd.patch: Rework completely into
+        build-no-PATH_MAX.patch.
+      + 12-643588-acl-autoconf-version-check.patch: Update, rename to
+        build-require-autoconf-version.patch.
+      + 50-typos.patch: Rename to man-fix-typos.patch.
+    - Remove private symbols marked optional, not exported anymore.
+    - Update debian/rules to handle the modernized upstream build system.
+    - Update autopkgtests to handle the modernized upstream build system.
+    - Update debian/copyright file.
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 28 Feb 2019 09:26:29 +0100
+
 acl (2.2.52-5) unstable; urgency=medium
 
   * Fix upstream test suite:

@@ -3,4 +3,4 @@
 set -e
 
 ./configure
-make -C test tests
+make check 2>&1

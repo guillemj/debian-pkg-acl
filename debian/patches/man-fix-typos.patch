@@ -34,7 +34,7 @@ Last-Update: 2019-02-16
  entry.
  .Pp
  The file owner, group, and other permissions always match the
-@@ -265,7 +265,9 @@ entry for the file owner and the
+@@ -256,7 +256,9 @@ entry for the file owner and the
  .Li other
  entry (entry tag type ACL_MASK).
  .It Li other
