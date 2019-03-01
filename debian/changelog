@@ -1,8 +1,8 @@
-acl (2.2.53-4) UNRELEASED; urgency=medium
+acl (2.2.53-4) unstable; urgency=medium
 
   * Replace gettext with autopoint in autopkgtest Depends fields.
 
- -- Guillem Jover <guillem@debian.org>  Fri, 01 Mar 2019 23:16:58 +0100
+ -- Guillem Jover <guillem@debian.org>  Fri, 01 Mar 2019 23:22:21 +0100
 
 acl (2.2.53-3) unstable; urgency=medium
 
