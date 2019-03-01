@@ -2,5 +2,6 @@
 
 set -e
 
+autoreconf -f -i 2>&1
 ./configure
 make check 2>&1

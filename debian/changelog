@@ -1,3 +1,11 @@
+acl (2.2.53-3) UNRELEASED; urgency=medium
+
+  * Run «autoreconf -f -i» in autopkgtests to handle modified build system
+    sources due to patching, triggering regeneration of the build system,
+    and failing because the exact tool versions are not available.
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 01 Mar 2019 13:42:40 +0100
+
 acl (2.2.53-2) unstable; urgency=medium
 
   * Fix build failure on GNU/kFreeBSD by defining ENODATA to ENOATTR if not
