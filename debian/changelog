@@ -1,6 +1,7 @@
 acl (2.2.53-5) UNRELEASED; urgency=medium
 
   * Switch to debhelper-compat (= 12) in Build-Depends from debian/compat.
+  * Switch to Standards-Version 4.4.0 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:50:59 +0200
 
