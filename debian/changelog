@@ -1,3 +1,9 @@
+acl (2.2.53-5) UNRELEASED; urgency=medium
+
+  * Switch to debhelper-compat (= 12) in Build-Depends from debian/compat.
+
+ -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:50:59 +0200
+
 acl (2.2.53-4) unstable; urgency=medium
 
   * Replace gettext with autopoint in autopkgtest Depends fields.
