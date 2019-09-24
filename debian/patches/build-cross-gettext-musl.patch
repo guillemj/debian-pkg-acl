@@ -1,0 +1,31 @@
+Author: Guillem Jover <guillem@debian.org>
+Description: Fix cross-compilation on musl-based systems.
+ The gettext implementation in musl does not define some of the internal
+ symbols that AM_GNU_GETTEXT used to check for. This got fixed in gettext
+ 0.19.8, but the AM_GNU_GETTEXT_VERSION macro requires a specific version
+ even if the system contains a higher one. We switch to use the new
+ AM_GNU_GETTEXT_REQUIRE_VERSION macro which requires at least a specific
+ version, and bump the AM_GNU_GETTEXT_VERSION to the first one that had
+ support for the new macro.
+
+---
+ configure.ac |    8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -34,7 +34,13 @@ AC_SYS_LARGEFILE
+ AM_PROG_AR
+ LT_INIT
+ 
+-AM_GNU_GETTEXT_VERSION([0.18.2])
++# Require at least this gettext version, but will take any later version too.
++AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
++# XXX: We cannot remove the following macro due to backwards compatibility
++# reasons. The above macro is set unconditionally to the minimal version
++# required, and the below is set to 0.19.6, the first version introducing
++# the AM_GNU_GETTEXT_REQUIRE_VERSION macro.
++AM_GNU_GETTEXT_VERSION([0.19.6])
+ AM_GNU_GETTEXT([external])
+ 
+ AC_ARG_ENABLE([debug],

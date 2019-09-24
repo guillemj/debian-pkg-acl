@@ -4,6 +4,9 @@ acl (2.2.53-5) UNRELEASED; urgency=medium
   * Switch to Standards-Version 4.4.0 (no changes needed).
   * Update French translation. Closes: #931274
     Thanks to Jean-Philippe MENGUAL <jpmengual@debian.org>.
+  * Fix cross-compilation for musl-based systems by bumping the minimum
+    required gettext version to the one that stopped checking for internal
+    GNU gettext symbols, which musl does not provide.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:50:59 +0200
 

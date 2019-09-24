@@ -1,6 +1,7 @@
 build-no-PATH_MAX.patch
 build-require-autoconf-version.patch
 build-define-ENODATA.patch
+build-cross-gettext-musl.patch
 man-fix-typos.patch
 man-ref-mount.patch
 man-setfacl-restore-stdin.patch
