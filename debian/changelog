@@ -1,4 +1,4 @@
-acl (2.2.53-5) UNRELEASED; urgency=medium
+acl (2.2.53-5) unstable; urgency=medium
 
   * Switch to debhelper-compat (= 12) in Build-Depends from debian/compat.
   * Switch to Standards-Version 4.4.0 (no changes needed).
@@ -8,7 +8,7 @@ acl (2.2.53-5) UNRELEASED; urgency=medium
     required gettext version to the one that stopped checking for internal
     GNU gettext symbols, which musl does not provide.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 14 Jul 2019 11:50:59 +0200
+ -- Guillem Jover <guillem@debian.org>  Tue, 24 Sep 2019 15:23:30 +0200
 
 acl (2.2.53-4) unstable; urgency=medium
 
