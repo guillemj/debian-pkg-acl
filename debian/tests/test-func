@@ -1,7 +1,8 @@
 #!/bin/sh
 
 set -e
+exec 2>&1
 
-autoreconf -f -i 2>&1
+autoreconf -f -i
 ./configure
-make check 2>&1
+make check
