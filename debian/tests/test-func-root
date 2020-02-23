@@ -5,6 +5,15 @@ exec 2>&1
 set -u
 set -x
 
+confflags=
+if [ -n "${DEB_BUILD_GNU_TYPE:-}" ] && [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+  if [ "$DEB_BUILD_GNU_TYPE" = "$DEB_HOST_GNU_TYPE" ]; then
+    confflags="--build=$DEB_BUILD_GNU_TYPE"
+  else
+    confflags="--build=$DEB_BUILD_GNU_TYPE --host=$DEB_HOST_GNU_TYPE"
+  fi
+fi
+
 autoreconf -f -i
-./configure
+./configure $confflags
 make check
