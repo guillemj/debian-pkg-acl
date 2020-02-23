@@ -2,6 +2,8 @@
 
 set -e
 exec 2>&1
+set -u
+set -x
 
 autoreconf -f -i
 ./configure
