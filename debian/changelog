@@ -7,6 +7,7 @@ acl (2.2.53-6) UNRELEASED; urgency=medium
   * Update upstream email address. Closes: #949688
   * Fix usage of uninitialized variable in getfacl. Closes: #612599
     Thanks to Vasily Gurevich <vas.gurevich@gmail.com>.
+  * Switch to Standards-Version 4.5.0 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 23 Feb 2020 00:52:13 +0100
 
