@@ -6,4 +6,5 @@ man-fix-typos.patch
 man-ref-mount.patch
 man-setfacl-restore-stdin.patch
 update-upstream-email-address.patch
+getfacl-fix-uninitialized-variable.patch
 l10n-update-fr.patch
