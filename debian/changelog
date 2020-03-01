@@ -1,4 +1,4 @@
-acl (2.2.53-6) UNRELEASED; urgency=medium
+acl (2.2.53-6) unstable; urgency=medium
 
   * Redirect stderr to stdout globally in autopkgtests instead of doing
     that per command.
@@ -9,7 +9,7 @@ acl (2.2.53-6) UNRELEASED; urgency=medium
     Thanks to Vasily Gurevich <vas.gurevich@gmail.com>.
   * Switch to Standards-Version 4.5.0 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Sun, 23 Feb 2020 00:52:13 +0100
+ -- Guillem Jover <guillem@debian.org>  Sun, 01 Mar 2020 02:06:51 +0100
 
 acl (2.2.53-5) unstable; urgency=medium
 
