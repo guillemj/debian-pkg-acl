@@ -4,6 +4,7 @@ acl (2.2.53-6) UNRELEASED; urgency=medium
     that per command.
   * Enable set -x and -u in autopkgtests.
   * Add support for cross-compilation to autopkgtests. Closes: #947048
+  * Update upstream email address. Closes: #949688
 
  -- Guillem Jover <guillem@debian.org>  Sun, 23 Feb 2020 00:52:13 +0100
 

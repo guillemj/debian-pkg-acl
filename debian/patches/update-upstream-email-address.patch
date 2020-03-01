@@ -1,0 +1,1359 @@
+From 673324f70167a0eeb1ce872cbf674518c4558e4f Mon Sep 17 00:00:00 2001
+From: Andreas Gruenbacher <agruenba@redhat.com>
+Date: Thu, 6 Feb 2020 17:04:03 +0100
+Subject: [PATCH] Update my email address
+
+---
+ libacl/__acl_extended_file.c        |    2 +-
+ libacl/__acl_from_xattr.c           |    2 +-
+ libacl/__acl_reorder_obj_p.c        |    2 +-
+ libacl/__acl_to_any_text.c          |    2 +-
+ libacl/__acl_to_xattr.c             |    2 +-
+ libacl/__apply_mask_to_mode.c       |    2 +-
+ libacl/__libobj.c                   |    2 +-
+ libacl/acl_add_perm.c               |    2 +-
+ libacl/acl_calc_mask.c              |    2 +-
+ libacl/acl_check.c                  |    2 +-
+ libacl/acl_clear_perms.c            |    2 +-
+ libacl/acl_cmp.c                    |    2 +-
+ libacl/acl_copy_entry.c             |    2 +-
+ libacl/acl_copy_ext.c               |    2 +-
+ libacl/acl_copy_int.c               |    2 +-
+ libacl/acl_create_entry.c           |    2 +-
+ libacl/acl_delete_def_file.c        |    2 +-
+ libacl/acl_delete_entry.c           |    2 +-
+ libacl/acl_delete_perm.c            |    2 +-
+ libacl/acl_dup.c                    |    2 +-
+ libacl/acl_entries.c                |    2 +-
+ libacl/acl_equiv_mode.c             |    2 +-
+ libacl/acl_error.c                  |    2 +-
+ libacl/acl_extended_fd.c            |    2 +-
+ libacl/acl_extended_file.c          |    2 +-
+ libacl/acl_extended_file_nofollow.c |    2 +-
+ libacl/acl_free.c                   |    2 +-
+ libacl/acl_from_mode.c              |    2 +-
+ libacl/acl_from_text.c              |    2 +-
+ libacl/acl_get_entry.c              |    2 +-
+ libacl/acl_get_fd.c                 |    2 +-
+ libacl/acl_get_file.c               |    2 +-
+ libacl/acl_get_perm.c               |    2 +-
+ libacl/acl_get_permset.c            |    2 +-
+ libacl/acl_get_qualifier.c          |    2 +-
+ libacl/acl_get_tag_type.c           |    2 +-
+ libacl/acl_init.c                   |    2 +-
+ libacl/acl_set_fd.c                 |    2 +-
+ libacl/acl_set_file.c               |    2 +-
+ libacl/acl_set_permset.c            |    2 +-
+ libacl/acl_set_qualifier.c          |    2 +-
+ libacl/acl_set_tag_type.c           |    2 +-
+ libacl/acl_size.c                   |    2 +-
+ libacl/acl_to_any_text.c            |    2 +-
+ libacl/acl_to_text.c                |    2 +-
+ libacl/acl_valid.c                  |    2 +-
+ libmisc/quote.c                     |    2 +-
+ libmisc/unquote.c                   |    2 +-
+ man/man1/getfacl.1                  |    4 ++--
+ man/man1/setfacl.1                  |    4 ++--
+ man/man3/acl_add_perm.3             |    4 ++--
+ man/man3/acl_calc_mask.3            |    4 ++--
+ man/man3/acl_check.3                |    4 ++--
+ man/man3/acl_clear_perms.3          |    4 ++--
+ man/man3/acl_cmp.3                  |    4 ++--
+ man/man3/acl_copy_entry.3           |    4 ++--
+ man/man3/acl_copy_ext.3             |    4 ++--
+ man/man3/acl_copy_int.3             |    4 ++--
+ man/man3/acl_create_entry.3         |    4 ++--
+ man/man3/acl_delete_def_file.3      |    4 ++--
+ man/man3/acl_delete_entry.3         |    4 ++--
+ man/man3/acl_delete_perm.3          |    4 ++--
+ man/man3/acl_dup.3                  |    4 ++--
+ man/man3/acl_entries.3              |    4 ++--
+ man/man3/acl_equiv_mode.3           |    4 ++--
+ man/man3/acl_error.3                |    4 ++--
+ man/man3/acl_extended_fd.3          |    4 ++--
+ man/man3/acl_extended_file.3        |    4 ++--
+ man/man3/acl_free.3                 |    4 ++--
+ man/man3/acl_from_mode.3            |    4 ++--
+ man/man3/acl_from_text.3            |    4 ++--
+ man/man3/acl_get_entry.3            |    4 ++--
+ man/man3/acl_get_fd.3               |    4 ++--
+ man/man3/acl_get_file.3             |    4 ++--
+ man/man3/acl_get_perm.3             |    4 ++--
+ man/man3/acl_get_permset.3          |    4 ++--
+ man/man3/acl_get_qualifier.3        |    4 ++--
+ man/man3/acl_get_tag_type.3         |    4 ++--
+ man/man3/acl_init.3                 |    4 ++--
+ man/man3/acl_set_fd.3               |    4 ++--
+ man/man3/acl_set_file.3             |    4 ++--
+ man/man3/acl_set_permset.3          |    4 ++--
+ man/man3/acl_set_qualifier.3        |    4 ++--
+ man/man3/acl_set_tag_type.3         |    4 ++--
+ man/man3/acl_size.3                 |    4 ++--
+ man/man3/acl_to_any_text.3          |    4 ++--
+ man/man3/acl_to_text.3              |    4 ++--
+ man/man3/acl_valid.3                |    4 ++--
+ man/man5/acl.5                      |    4 ++--
+ tools/do_set.c                      |    2 +-
+ tools/getfacl.c                     |    2 +-
+ tools/parse.c                       |    2 +-
+ tools/sequence.c                    |    2 +-
+ tools/setfacl.c                     |    2 +-
+ tools/user_group.c                  |    2 +-
+ 95 files changed, 136 insertions(+), 136 deletions(-)
+
+--- a/libacl/__acl_extended_file.c
++++ b/libacl/__acl_extended_file.c
+@@ -2,7 +2,7 @@
+   File: __acl_extended_file.c
+ 
+   Copyright (C) 2000, 2011
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/__acl_from_xattr.c
++++ b/libacl/__acl_from_xattr.c
+@@ -2,7 +2,7 @@
+   File: __acl_from_xattr.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/__acl_reorder_obj_p.c
++++ b/libacl/__acl_reorder_obj_p.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management, Posix Library Functions)
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/__acl_to_any_text.c
++++ b/libacl/__acl_to_any_text.c
+@@ -2,7 +2,7 @@
+   File: __acl_to_any_text.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/__acl_to_xattr.c
++++ b/libacl/__acl_to_xattr.c
+@@ -2,7 +2,7 @@
+   File: __acl_to_xattr.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/__apply_mask_to_mode.c
++++ b/libacl/__apply_mask_to_mode.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999-2002
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/__libobj.c
++++ b/libacl/__libobj.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999-2002
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_add_perm.c
++++ b/libacl/acl_add_perm.c
+@@ -2,7 +2,7 @@
+   File: acl_add_perm.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_calc_mask.c
++++ b/libacl/acl_calc_mask.c
+@@ -2,7 +2,7 @@
+   File: acl_calc_mask.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_check.c
++++ b/libacl/acl_check.c
+@@ -2,7 +2,7 @@
+   File: acl_check.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_clear_perms.c
++++ b/libacl/acl_clear_perms.c
+@@ -2,7 +2,7 @@
+   File: acl_clear_perms.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_cmp.c
++++ b/libacl/acl_cmp.c
+@@ -2,7 +2,7 @@
+   File: acl_cmp.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_copy_entry.c
++++ b/libacl/acl_copy_entry.c
+@@ -2,7 +2,7 @@
+   File: acl_copy_entry.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_copy_ext.c
++++ b/libacl/acl_copy_ext.c
+@@ -2,7 +2,7 @@
+   File: acl_copy_ext.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_copy_int.c
++++ b/libacl/acl_copy_int.c
+@@ -2,7 +2,7 @@
+   File: acl_copy_int.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_create_entry.c
++++ b/libacl/acl_create_entry.c
+@@ -2,7 +2,7 @@
+   File: acl_create_entry.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_delete_def_file.c
++++ b/libacl/acl_delete_def_file.c
+@@ -2,7 +2,7 @@
+   File: acl_delete_def_file.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_delete_entry.c
++++ b/libacl/acl_delete_entry.c
+@@ -2,7 +2,7 @@
+   File: acl_delete_entry.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_delete_perm.c
++++ b/libacl/acl_delete_perm.c
+@@ -2,7 +2,7 @@
+   File: acl_delete_perm.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_dup.c
++++ b/libacl/acl_dup.c
+@@ -2,7 +2,7 @@
+   File: acl_dup.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_entries.c
++++ b/libacl/acl_entries.c
+@@ -2,7 +2,7 @@
+   File: acl_entries.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_equiv_mode.c
++++ b/libacl/acl_equiv_mode.c
+@@ -2,7 +2,7 @@
+   File: acl_equiv_mode.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_error.c
++++ b/libacl/acl_error.c
+@@ -2,7 +2,7 @@
+   File: acl_error.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_extended_fd.c
++++ b/libacl/acl_extended_fd.c
+@@ -2,7 +2,7 @@
+   File: acl_extended_fd.c
+ 
+   Copyright (C) 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_extended_file.c
++++ b/libacl/acl_extended_file.c
+@@ -2,7 +2,7 @@
+   File: acl_extended_file.c
+ 
+   Copyright (C) 2011
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_extended_file_nofollow.c
++++ b/libacl/acl_extended_file_nofollow.c
+@@ -2,7 +2,7 @@
+   File: acl_extended_file_nofollow.c
+ 
+   Copyright (C) 2011
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_free.c
++++ b/libacl/acl_free.c
+@@ -2,7 +2,7 @@
+   File: acl_free.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_from_mode.c
++++ b/libacl/acl_from_mode.c
+@@ -2,7 +2,7 @@
+   File: acl_from_mode.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_from_text.c
++++ b/libacl/acl_from_text.c
+@@ -2,7 +2,7 @@
+   File: acl_from_text.c
+ 
+   Copyright (C) 1999, 2000, 2001
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_entry.c
++++ b/libacl/acl_get_entry.c
+@@ -2,7 +2,7 @@
+   File: acl_get_entry.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_fd.c
++++ b/libacl/acl_get_fd.c
+@@ -2,7 +2,7 @@
+   File: acl_get_fd.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_file.c
++++ b/libacl/acl_get_file.c
+@@ -2,7 +2,7 @@
+   File: acl_get_file.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_perm.c
++++ b/libacl/acl_get_perm.c
+@@ -2,7 +2,7 @@
+   File: acl_get_perm.c
+ 
+   Copyright (C) 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_permset.c
++++ b/libacl/acl_get_permset.c
+@@ -2,7 +2,7 @@
+   File: acl_get_permset.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_qualifier.c
++++ b/libacl/acl_get_qualifier.c
+@@ -2,7 +2,7 @@
+   File: acl_get_qualifier.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_get_tag_type.c
++++ b/libacl/acl_get_tag_type.c
+@@ -2,7 +2,7 @@
+   File: acl_get_tag_type.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_init.c
++++ b/libacl/acl_init.c
+@@ -2,7 +2,7 @@
+   File: acl_init.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_set_fd.c
++++ b/libacl/acl_set_fd.c
+@@ -2,7 +2,7 @@
+   File: acl_set_fd.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_set_file.c
++++ b/libacl/acl_set_file.c
+@@ -2,7 +2,7 @@
+   File: acl_set_file.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_set_permset.c
++++ b/libacl/acl_set_permset.c
+@@ -2,7 +2,7 @@
+   File: acl_set_permset.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_set_qualifier.c
++++ b/libacl/acl_set_qualifier.c
+@@ -2,7 +2,7 @@
+   File: acl_set_qualifier.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_set_tag_type.c
++++ b/libacl/acl_set_tag_type.c
+@@ -2,7 +2,7 @@
+   File: acl_set_tag_type.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_size.c
++++ b/libacl/acl_size.c
+@@ -2,7 +2,7 @@
+   File: acl_size.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_to_any_text.c
++++ b/libacl/acl_to_any_text.c
+@@ -2,7 +2,7 @@
+   File: acl_to_any_text.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_to_text.c
++++ b/libacl/acl_to_text.c
+@@ -2,7 +2,7 @@
+   File: acl_to_text.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libacl/acl_valid.c
++++ b/libacl/acl_valid.c
+@@ -2,7 +2,7 @@
+   File: acl_valid.c
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/libmisc/quote.c
++++ b/libmisc/quote.c
+@@ -1,7 +1,7 @@
+ /*
+   File: quote.c
+ 
+-  Copyright (C) 2003 Andreas Gruenbacher <a.gruenbacher@bestbits.at>
++  Copyright (C) 2003 Andreas Gruenbacher <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or modify it under
+   the terms of the GNU Lesser General Public License as published by the
+--- a/libmisc/unquote.c
++++ b/libmisc/unquote.c
+@@ -1,7 +1,7 @@
+ /*
+   File: unquote.c
+ 
+-  Copyright (C) 2003 Andreas Gruenbacher <a.gruenbacher@bestbits.at>
++  Copyright (C) 2003 Andreas Gruenbacher <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or modify it under
+   the terms of the GNU Lesser General Public License as published by the
+--- a/man/man1/getfacl.1
++++ b/man/man1/getfacl.1
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2000 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2000 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -165,7 +165,7 @@ behaves as if it was invoked as ``getfac
+ No flags comments indicating the setuid, setgid, and sticky bits are generated.
+ .SH AUTHOR
+ Andreas Gruenbacher,
+-.RI < a.gruenbacher@bestbits.at >.
++.RI < andreas.gruenbacher@gmail.com >.
+ 
+ Please send your bug reports and comments to the above address.
+ .SH SEE ALSO
+--- a/man/man1/setfacl.1
++++ b/man/man1/setfacl.1
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2000 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2000 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -310,7 +310,7 @@ The
+ options also accept permission fields (and ignore them). 
+ .SH AUTHOR
+ Andreas Gruenbacher,
+-.RI < a.gruenbacher@bestbits.at >.
++.RI < andreas.gruenbacher@gmail.com >.
+ 
+ Please send your bug reports, suggested features and comments to the
+ above address.
+--- a/man/man3/acl_add_perm.3
++++ b/man/man3/acl_add_perm.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -83,4 +83,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_calc_mask.3
++++ b/man/man3/acl_calc_mask.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -98,4 +98,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_check.3
++++ b/man/man3/acl_check.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -119,4 +119,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_clear_perms.3
++++ b/man/man3/acl_clear_perms.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -72,4 +72,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_cmp.3
++++ b/man/man3/acl_cmp.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -87,4 +87,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_copy_entry.3
++++ b/man/man3/acl_copy_entry.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -79,4 +79,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_copy_ext.3
++++ b/man/man3/acl_copy_ext.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -105,4 +105,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_copy_int.3
++++ b/man/man3/acl_copy_int.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -86,4 +86,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_create_entry.3
++++ b/man/man3/acl_create_entry.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -101,4 +101,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_delete_def_file.3
++++ b/man/man3/acl_delete_def_file.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -83,4 +83,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_delete_entry.3
++++ b/man/man3/acl_delete_entry.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -83,4 +83,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_delete_perm.3
++++ b/man/man3/acl_delete_perm.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -83,4 +83,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_dup.3
++++ b/man/man3/acl_dup.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -84,4 +84,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_entries.3
++++ b/man/man3/acl_entries.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -70,4 +70,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_equiv_mode.3
++++ b/man/man3/acl_equiv_mode.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -93,4 +93,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_error.3
++++ b/man/man3/acl_error.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -68,4 +68,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_extended_fd.3
++++ b/man/man3/acl_extended_fd.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -102,4 +102,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_extended_file.3
++++ b/man/man3/acl_extended_file.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -121,4 +121,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_free.3
++++ b/man/man3/acl_free.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -79,4 +79,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_from_mode.3
++++ b/man/man3/acl_from_mode.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -71,4 +71,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_from_text.3
++++ b/man/man3/acl_from_text.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -90,4 +90,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_entry.3
++++ b/man/man3/acl_get_entry.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -139,4 +139,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_fd.3
++++ b/man/man3/acl_get_fd.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -93,4 +93,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_file.3
++++ b/man/man3/acl_get_file.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -133,4 +133,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_perm.3
++++ b/man/man3/acl_get_perm.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -95,4 +95,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_permset.3
++++ b/man/man3/acl_get_permset.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -79,4 +79,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_qualifier.3
++++ b/man/man3/acl_get_qualifier.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -122,4 +122,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_get_tag_type.3
++++ b/man/man3/acl_get_tag_type.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -78,4 +78,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_init.3
++++ b/man/man3/acl_init.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -84,4 +84,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_set_fd.3
++++ b/man/man3/acl_set_fd.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -88,4 +88,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_set_file.3
++++ b/man/man3/acl_set_file.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -165,4 +165,4 @@ The POSIX.1e function for removing a def
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_set_permset.3
++++ b/man/man3/acl_set_permset.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -95,4 +95,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_set_qualifier.3
++++ b/man/man3/acl_set_qualifier.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -110,4 +110,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_set_tag_type.3
++++ b/man/man3/acl_set_tag_type.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -80,4 +80,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_size.3
++++ b/man/man3/acl_size.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -82,4 +82,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_to_any_text.3
++++ b/man/man3/acl_to_any_text.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -166,4 +166,4 @@ functions defined in IEEE Std 1003.1e dr
+ .Xr acl 5
+ .Sh AUTHOR
+ Written by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_to_text.3
++++ b/man/man3/acl_to_text.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -108,4 +108,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man3/acl_valid.3
++++ b/man/man3/acl_valid.3
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -83,4 +83,4 @@ IEEE Std 1003.1e draft 17 (\(lqPOSIX.1e\
+ Derived from the FreeBSD manual pages written by
+ .An "Robert N M Watson" Aq rwatson@FreeBSD.org ,
+ and adapted for Linux by
+-.An "Andreas Gruenbacher" Aq a.gruenbacher@bestbits.at .
++.An "Andreas Gruenbacher" Aq andreas.gruenbacher@gmail.com .
+--- a/man/man5/acl.5
++++ b/man/man5/acl.5
+@@ -1,6 +1,6 @@
+ .\" Access Control Lists manual pages
+ .\"
+-.\" (C) 2002 Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++.\" (C) 2002 Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ .\"
+ .\" This is free documentation; you can redistribute it and/or
+ .\" modify it under the terms of the GNU General Public License as
+@@ -496,4 +496,4 @@ These non-portable extensions are availa
+ .Xr acl_get_perm 3 ,
+ .Xr acl_to_any_text 3
+ .Sh AUTHOR
+-Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+--- a/tools/do_set.c
++++ b/tools/do_set.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/tools/getfacl.c
++++ b/tools/getfacl.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999-2002
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+--- a/tools/parse.c
++++ b/tools/parse.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/tools/sequence.c
++++ b/tools/sequence.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/tools/setfacl.c
++++ b/tools/setfacl.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999-2002
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+--- a/tools/user_group.c
++++ b/tools/user_group.c
+@@ -3,7 +3,7 @@
+   (Linux Access Control List Management)
+ 
+   Copyright (C) 1999, 2000
+-  Andreas Gruenbacher, <a.gruenbacher@bestbits.at>
++  Andreas Gruenbacher, <andreas.gruenbacher@gmail.com>
+  	
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
