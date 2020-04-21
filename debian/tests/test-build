@@ -41,6 +41,6 @@ $CC -o example example.c $($PKG_CONFIG --libs libacl)
 test -x ./example
 ./example
 
-$CC -o example-static example.c $($PKG_CONFIG --static --libs libacl)
+$CC -static -o example-static example.c $($PKG_CONFIG --static --libs libacl)
 test -x ./example-static
 ./example-static
