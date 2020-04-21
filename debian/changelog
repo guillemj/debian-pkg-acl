@@ -2,6 +2,7 @@ acl (2.2.53-7) UNRELEASED; urgency=medium
 
   * Properly link statically the autopkgtest testing the library linkage.
   * Add files not being installed to debian/not-installed.
+  * Switch to debhelper compatibility level 13.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 22 Apr 2020 01:49:41 +0200
 
