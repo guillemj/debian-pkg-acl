@@ -4,6 +4,15 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
+# The following architectures still fail the test suite:
+#   hurd-any
+#     (operation not supported)
+#   kfreebsd-any
+#     (function not implemented, BSD directory inheritance semantics)
+ifneq (,$(filter $(DEB_HOST_ARCH_OS),hurd kfreebsd))
+  TESTS_FLAKY = yes
+endif
+
 %:
 	dh $@
 
@@ -11,7 +20,10 @@ override_dh_auto_configure:
 	dh_auto_configure -- --bindir=/bin
 
 override_dh_auto_test:
-	dh_auto_test || true
+ifeq ($(TESTS_FLAKY),yes)
+	@echo "Notice: Running tests in flaky mode, errors will be ignored."
+endif
+	$(if $(TESTS_FLAKY),-)dh_auto_test
 
 override_dh_installchangelogs:
 	dh_installchangelogs doc/CHANGES

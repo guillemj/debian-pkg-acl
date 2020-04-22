@@ -5,6 +5,8 @@ acl (2.2.53-7) UNRELEASED; urgency=medium
   * Switch to debhelper compatibility level 13.
   * Switch to default dh_makeshlibs behavior instead of passing -V.
   * Switch to dh sequencer.
+  * Make the testsuite fatal on architectures known to pass it, to avoid
+    future regressions.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 22 Apr 2020 01:49:41 +0200
 
