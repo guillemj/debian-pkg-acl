@@ -7,6 +7,8 @@ acl (2.2.53-7) UNRELEASED; urgency=medium
   * Switch to dh sequencer.
   * Make the testsuite fatal on architectures known to pass it, to avoid
     future regressions.
+  * Add acl-udeb and libacl1-udeb binary packages, for use by rsync-udeb.
+    Thanks to Samuel Henrique <samueloph@debian.org>. Closes: #949712
 
  -- Guillem Jover <guillem@debian.org>  Wed, 22 Apr 2020 01:49:41 +0200
 

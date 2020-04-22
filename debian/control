@@ -59,3 +59,22 @@ Depends:
 Description: access control list - shared library
  This package contains the shared library containing the POSIX 1003.1e
  draft standard 17 functions for manipulating access control lists.
+
+Package: acl-udeb
+Package-Type: udeb
+Section: debian-installer
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ libacl1-udeb (= ${binary:Version}),
+Description: access control list - udeb utilities
+
+Package: libacl1-udeb
+Package-Type: udeb
+Section: debian-installer
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: access control list - udeb shared library
