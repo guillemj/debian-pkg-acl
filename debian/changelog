@@ -2,6 +2,7 @@ acl (2.2.53-9) UNRELEASED; urgency=medium
 
   * Add or update Forwarded and Origin information in patches.
   * Switch to Standards-Version 4.5.1 (no changes needed).
+  * Add debian/upstream/metadata file.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 28 Nov 2020 11:56:45 +0100
 
