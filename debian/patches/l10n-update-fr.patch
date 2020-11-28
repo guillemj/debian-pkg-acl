@@ -1,5 +1,6 @@
 Author: Jean-Philippe MENGUAL <jpmengual@debian.org>
 Description: Update French translation
+Forwarded: yes
 
 ---
  po/fr.po |  164 +++++++++++++++++++++++++++++++--------------------------------

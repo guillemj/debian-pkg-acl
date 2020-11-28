@@ -5,6 +5,8 @@ Description: Fix for incompatibility with autoconf2.13
  message about the problem.
 Author: Wookey <wookey@linaro.org>
 Bug-Debian: https://bugs.debian.org/643588
+Forwarded: yes
+Origin: vendor
 
 ---
  configure.ac |    1 +

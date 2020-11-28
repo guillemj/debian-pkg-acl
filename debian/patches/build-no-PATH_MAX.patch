@@ -1,7 +1,7 @@
 Description: Remove PATH_MAX usage which does not exist on GNU/Hurd.
 Author: Guillem Jover <guillem@debian.org>
 Origin: vendor
-Forwarded: no
+Forwarded: yes
 Last-Update: 2019-02-28
 
 ---

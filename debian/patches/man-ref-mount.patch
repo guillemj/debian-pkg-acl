@@ -2,7 +2,7 @@ Description: Add a reference to mount(8) for the acl/noacl mount options.
 Author: Guillem Jover <guillem@debian.org>
 Bug-Debian: https://bugs.debian.org/304764
 Origin: vendor
-Forwarded: no
+Forwarded: yes
 Last-Modified: 2019-02-28
 
 
