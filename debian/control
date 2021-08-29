@@ -62,6 +62,7 @@ Description: access control list - shared library
 
 Package: acl-udeb
 Package-Type: udeb
+Build-Profiles: <!noudeb>
 Section: debian-installer
 Architecture: any
 Depends:
@@ -72,6 +73,7 @@ Description: access control list - udeb utilities
 
 Package: libacl1-udeb
 Package-Type: udeb
+Build-Profiles: <!noudeb>
 Section: debian-installer
 Architecture: any
 Depends:
