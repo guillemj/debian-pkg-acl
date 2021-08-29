@@ -3,8 +3,8 @@ Description: Update French translation
 Forwarded: yes
 
 ---
- po/fr.po |  164 +++++++++++++++++++++++++++++++--------------------------------
- 1 file changed, 82 insertions(+), 82 deletions(-)
+ po/fr.po |  287 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 143 insertions(+), 144 deletions(-)
 
 --- a/po/fr.po
 +++ b/po/fr.po
@@ -18,13 +18,15 @@ Forwarded: yes
  #
  # This program is free software: you can redistribute it and/or modify it
  # under the terms of the GNU General Public License as published by
-@@ -20,12 +22,12 @@ msgstr ""
+@@ -19,32 +21,16 @@ msgid ""
+ msgstr ""
  "Project-Id-Version: Acl\n"
  "Report-Msgid-Bugs-To: acl-devel@nongnu.org\n"
- "POT-Creation-Date: 2018-06-18 23:10-0400\n"
+-"POT-Creation-Date: 2021-03-16 07:43+0100\n"
 -"PO-Revision-Date: 2005-09-24 15:46+0200\n"
 -"Last-Translator: Sylvain Archenault <sylvain.archenault@laposte.net>\n"
 -"Language-Team: french <debian-l10n-french@lists.debian.org>\n"
++"POT-Creation-Date: 2018-06-18 23:10-0400\n"
 +"PO-Revision-Date: 2019-07-14 11:50+0200\n"
 +"Last-Translator: Jean-Philippe MENGUAL <jpmengual@debian.org>\n"
 +"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -35,28 +37,45 @@ Forwarded: yes
  "Content-Transfer-Encoding: 8bit\n"
  "Plural-Forms: \n"
  
-@@ -45,143 +47,143 @@ msgstr "conserver les permissions pour %
- 
- #: libacl/acl_error.c:33
- msgid "Multiple entries of same type"
+-#: libacl/acl_error.c:33
+-msgid "Multiple entries of same type"
 -msgstr "Plusieurs entrées de même type"
-+msgstr "Plusieurs entrÃ©es de mÃªme type"
- 
- #: libacl/acl_error.c:35
- msgid "Duplicate entries"
+-
+-#: libacl/acl_error.c:35
+-msgid "Duplicate entries"
 -msgstr "Entrées dupliquées"
-+msgstr "EntrÃ©es dupliquÃ©es"
- 
- #: libacl/acl_error.c:37
- msgid "Missing or wrong entry"
+-
+-#: libacl/acl_error.c:37
+-msgid "Missing or wrong entry"
 -msgstr "Entrée erronée ou manquante"
-+msgstr "EntrÃ©e erronÃ©e ou manquante"
- 
- #: libacl/acl_error.c:39
- msgid "Invalid entry type"
+-
+-#: libacl/acl_error.c:39
+-msgid "Invalid entry type"
 -msgstr "Type d'entrée non valable"
-+msgstr "Type d'entrÃ©e non valable"
+-
+ #: libacl/perm_copy_fd.c:124 libacl/perm_copy_fd.c:136
+ #: libacl/perm_copy_fd.c:198 libacl/perm_copy_file.c:124
+ #: libacl/perm_copy_file.c:139 libacl/perm_copy_file.c:150
+@@ -59,159 +45,245 @@ msgstr "modifier les permissions pour %s
+ msgid "preserving permissions for %s"
+ msgstr "conserver les permissions pour %s"
  
++#: libacl/acl_error.c:33
++msgid "Multiple entries of same type"
++msgstr "Plusieurs entrÃ©es de mÃªme type"
++
++#: libacl/acl_error.c:35
++msgid "Duplicate entries"
++msgstr "EntrÃ©es dupliquÃ©es"
++
++#: libacl/acl_error.c:37
++msgid "Missing or wrong entry"
++msgstr "EntrÃ©e erronÃ©e ou manquante"
++
++#: libacl/acl_error.c:39
++msgid "Invalid entry type"
++msgstr "Type d'entrÃ©e non valable"
++
  #: tools/chacl.c:46
  #, c-format
  msgid "Usage:\n"
@@ -176,55 +195,44 @@ Forwarded: yes
  msgid "%s: malloc failed: %s\n"
 -msgstr "%s : échec de malloc : %s\n"
 +msgstr "%sÂ : Ã©chec de mallocÂ : %s\n"
- 
- #: tools/getfacl.c:497
- #, c-format
- msgid "%s: Removing leading '/' from absolute path names\n"
--msgstr "%s : suppression du premier « / » des noms de chemins absolus\n"
-+msgstr "%sÂ : suppression du premier Â«Â /Â Â» des noms de chemins absolus\n"
- 
- #: tools/getfacl.c:568
- #, c-format
- msgid "%s %s -- get file access control lists\n"
--msgstr "%s %s -- obtenir les listes de contrôle d'accès du fichier\n"
-+msgstr "%s %s -- obtenir les listes de contrÃ´le d'accÃ¨s du fichier\n"
- 
- #: tools/getfacl.c:570 tools/getfacl.c:750
- #, c-format
- msgid "Usage: %s [-%s] file ...\n"
--msgstr "Utilisation : %s [-%s] fichier...\n"
-+msgstr "UtilisationÂ : %s [-%s] fichier ...\n"
- 
- #: tools/getfacl.c:576
- #, c-format
- msgid "  -d, --default           display the default access control list\n"
- msgstr ""
--"-d, --default           afficher la liste de contrôle d'accès par défaut\n"
-+"-d, --default           afficher la liste de contrÃ´le d'accÃ¨s par dÃ©faut\n"
- 
- #: tools/getfacl.c:580
--#, fuzzy, c-format
++
++#: tools/getfacl.c:497
 +#, c-format
- msgid ""
- "  -a,  --access           display the file access control list only\n"
- "  -d, --default           display the default access control list only\n"
-@@ -196,94 +198,92 @@ msgid ""
- "  -n, --numeric           print numeric user/group identifiers\n"
- "  -p, --absolute-names    don't strip leading '/' in pathnames\n"
- msgstr ""
--"      --access            affiche seulement le fichier ACL\n"
--"  -d, --default           affiche seulement le fichier ACL par défaut\n"
--"      --omit-header       n'affiche pas les commentaires d'en-tête\n"
--"      --all-effective     affiche tous les droits en vigueur\n"
--"      --no-effective      affiche les droits inactifs\n"
--"      --skip-base         ignorer les fichiers qui ont seulement les "
--"entrées\n"
--"                          de base\n"
--"  -R, --recursive         parcourir récursivement les sous-répertoires\n"
--"  -L, --logical           suivre les liens symboliques\n"
--"  -P, --physical          ne pas suivre les liens symboliques\n"
--"      --tabular           sortie tabulée\n"
--"      --numeric           afficher les identifiants numériques des\n"
++msgid "%s: Removing leading '/' from absolute path names\n"
++msgstr "%sÂ : suppression du premier Â«Â /Â Â» des noms de chemins absolus\n"
++
++#: tools/getfacl.c:568
++#, c-format
++msgid "%s %s -- get file access control lists\n"
++msgstr "%s %s -- obtenir les listes de contrÃ´le d'accÃ¨s du fichier\n"
++
++#: tools/getfacl.c:570 tools/getfacl.c:750
++#, c-format
++msgid "Usage: %s [-%s] file ...\n"
++msgstr "UtilisationÂ : %s [-%s] fichier ...\n"
++
++#: tools/getfacl.c:576
++#, c-format
++msgid "  -d, --default           display the default access control list\n"
++msgstr ""
++"-d, --default           afficher la liste de contrÃ´le d'accÃ¨s par dÃ©faut\n"
++
++#: tools/getfacl.c:580
++#, c-format
++msgid ""
++"  -a,  --access           display the file access control list only\n"
++"  -d, --default           display the default access control list only\n"
++"  -c, --omit-header       do not display the comment header\n"
++"  -e, --all-effective     print all effective rights\n"
++"  -E, --no-effective      print no effective rights\n"
++"  -s, --skip-base         skip files that only have the base entries\n"
++"  -R, --recursive         recurse into subdirectories\n"
++"  -L, --logical           logical walk, follow symbolic links\n"
++"  -P, --physical          physical walk, do not follow symbolic links\n"
++"  -t, --tabular           use tabular output format\n"
++"  -n, --numeric           print numeric user/group identifiers\n"
++"  -p, --absolute-names    don't strip leading '/' in pathnames\n"
++msgstr ""
 +"  -a, --access            afficher seulement la liste de contrÃ´le d'accÃ¨s du fichier\n"
 +"  -d, --default           afficher seulement la liste de contrÃ´le d'accÃ¨s par dÃ©faut\n"
 +"  -c, --omit-header       ne pas afficher l'en-tÃªte de commentaire\n"
@@ -236,32 +244,26 @@ Forwarded: yes
 +"  -P, --physical          parcours physique, ne pas suivre les liens symboliques\n"
 +"  -t, --tabular           utiliser une sortie sous forme de tableau\n"
 +"  -n, --numeric           afficher les identifiants numÃ©riques des\n"
- "                          utilisateurs/groupes\n"
--"      --absolute-names    ne pas enlever le premier « / » dans les chemins\n"
++"                          utilisateurs/groupes\n"
 +"  -p, --absolute-names    ne pas enlever le premier Â«Â /Â Â» dans les chemins\n"
- 
- #: tools/getfacl.c:595 tools/setfacl.c:299
--#, fuzzy, c-format
++
++#: tools/getfacl.c:595 tools/setfacl.c:299
 +#, c-format
- msgid ""
- "  -v, --version           print version and exit\n"
- "  -h, --help              this help text\n"
- msgstr ""
--"      --version           afficher la version et quitter\n"
--"      --help              afficher ce message d'aide\n"
++msgid ""
++"  -v, --version           print version and exit\n"
++"  -h, --help              this help text\n"
++msgstr ""
 +"  -v, --version           afficher la version et quitter\n"
 +"  -h, --help              afficher ce message d'aide\n"
- 
- #: tools/getfacl.c:737 tools/setfacl.c:316
- #, c-format
- msgid "%s: Standard input: %s\n"
--msgstr "%s : Sortie standard : %s\n"
++
++#: tools/getfacl.c:737 tools/setfacl.c:316
++#, c-format
++msgid "%s: Standard input: %s\n"
 +msgstr "%sÂ : entrÃ©e standardÂ : %s\n"
- 
- #: tools/getfacl.c:752 tools/setfacl.c:655
- #, c-format
- msgid "Try `%s --help' for more information.\n"
--msgstr "Essayer « %s --help » pour plus d'informations.\n"
++
++#: tools/getfacl.c:752 tools/setfacl.c:655
++#, c-format
++msgid "Try `%s --help' for more information.\n"
 +msgstr "Essayer Â«Â %s --helpÂ Â» pour plus d'informations.\n"
  
  #: tools/do_set.c:410
@@ -331,7 +333,7 @@ Forwarded: yes
  
  #: tools/setfacl.c:271
  #, c-format
-@@ -295,23 +295,23 @@ msgid ""
+@@ -223,23 +295,23 @@ msgid ""
  "  -b, --remove-all        remove all extended ACL entries\n"
  "  -k, --remove-default    remove the default ACL\n"
  msgstr ""
@@ -364,7 +366,7 @@ Forwarded: yes
  "      --mask              recalculer les masques des droits en vigueur\n"
  
  #: tools/setfacl.c:286
-@@ -321,8 +321,8 @@ msgid ""
+@@ -249,8 +321,8 @@ msgid ""
  "  -d, --default           operations apply to the default ACL\n"
  msgstr ""
  "  -n, --no-mask           ne pas recalculer les masques de droits en "
@@ -375,7 +377,7 @@ Forwarded: yes
  
  #: tools/setfacl.c:291
  #, c-format
-@@ -333,28 +333,28 @@ msgid ""
+@@ -261,101 +333,28 @@ msgid ""
  "      --restore=file      restore ACLs (inverse of `getfacl -R')\n"
  "      --test              test mode (ACLs are not modified)\n"
  msgstr ""
@@ -385,6 +387,20 @@ Forwarded: yes
  "  -P, --physical          ne pas suivre les liens symboliques\n"
 -"      --restore=fichier   restaurer les ACL (inverse de « getfacl -R »)\n"
 -"      --test              mode test (les ACL ne sont pas modifiés)\n"
+-
+-#: tools/setfacl.c:299 tools/getfacl.c:597
+-#, fuzzy, c-format
+-msgid ""
+-"  -v, --version           print version and exit\n"
+-"  -h, --help              this help text\n"
+-msgstr ""
+-"      --version           afficher la version et quitter\n"
+-"      --help              afficher ce message d'aide\n"
+-
+-#: tools/setfacl.c:316 tools/getfacl.c:743
+-#, c-format
+-msgid "%s: Standard input: %s\n"
+-msgstr "%s : Sortie standard : %s\n"
 +"      --restore=fichier   restaurer les ACL (inverse de Â«Â getfacl -RÂ Â»)\n"
 +"      --test              mode test (les ACL ne sont pas modifiÃ©es)\n"
  
@@ -410,4 +426,63 @@ Forwarded: yes
  #, c-format
  msgid "%s: %s in line %d of standard input\n"
 -msgstr "%s : %s à la ligne %d de la sortie standard\n"
+-
+-#: tools/setfacl.c:655 tools/getfacl.c:758
+-#, c-format
+-msgid "Try `%s --help' for more information.\n"
+-msgstr "Essayer « %s --help » pour plus d'informations.\n"
+-
+-#: tools/getfacl.c:498
+-#, c-format
+-msgid "%s: Removing leading '/' from absolute path names\n"
+-msgstr "%s : suppression du premier « / » des noms de chemins absolus\n"
+-
+-#: tools/getfacl.c:569
+-#, c-format
+-msgid "%s %s -- get file access control lists\n"
+-msgstr "%s %s -- obtenir les listes de contrôle d'accès du fichier\n"
+-
+-#: tools/getfacl.c:571 tools/getfacl.c:756
+-#, c-format
+-msgid "Usage: %s [-%s] file ...\n"
+-msgstr "Utilisation : %s [-%s] fichier...\n"
+-
+-#: tools/getfacl.c:577
+-#, c-format
+-msgid "  -d, --default           display the default access control list\n"
+-msgstr ""
+-"-d, --default           afficher la liste de contrôle d'accès par défaut\n"
+-
+-#: tools/getfacl.c:581
+-#, fuzzy, c-format
+-msgid ""
+-"  -a, --access            display the file access control list only\n"
+-"  -d, --default           display the default access control list only\n"
+-"  -c, --omit-header       do not display the comment header\n"
+-"  -e, --all-effective     print all effective rights\n"
+-"  -E, --no-effective      print no effective rights\n"
+-"  -s, --skip-base         skip files that only have the base entries\n"
+-"  -R, --recursive         recurse into subdirectories\n"
+-"  -L, --logical           logical walk, follow symbolic links\n"
+-"  -P, --physical          physical walk, do not follow symbolic links\n"
+-"  -t, --tabular           use tabular output format\n"
+-"  -n, --numeric           print numeric user/group identifiers\n"
+-"      --one-file-system   skip files on different filesystems\n"
+-"  -p, --absolute-names    don't strip leading '/' in pathnames\n"
+-msgstr ""
+-"      --access            affiche seulement le fichier ACL\n"
+-"  -d, --default           affiche seulement le fichier ACL par défaut\n"
+-"      --omit-header       n'affiche pas les commentaires d'en-tête\n"
+-"      --all-effective     affiche tous les droits en vigueur\n"
+-"      --no-effective      affiche les droits inactifs\n"
+-"      --skip-base         ignorer les fichiers qui ont seulement les "
+-"entrées\n"
+-"                          de base\n"
+-"  -R, --recursive         parcourir récursivement les sous-répertoires\n"
+-"  -L, --logical           suivre les liens symboliques\n"
+-"  -P, --physical          ne pas suivre les liens symboliques\n"
+-"      --tabular           sortie tabulée\n"
+-"      --numeric           afficher les identifiants numériques des\n"
+-"                          utilisateurs/groupes\n"
+-"      --absolute-names    ne pas enlever le premier « / » dans les chemins\n"
 +msgstr "%sÂ : %s Ã  la ligne %d de lâ€™entrÃ©e standard\n"

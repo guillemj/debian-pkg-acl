@@ -1,3 +1,12 @@
+acl (2.3.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+    - Remove upstream patches included in this release.
+    - Refresh remaining patches.
+    - Update upstream signing key.
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 09 Apr 2021 02:42:48 +0200
+
 acl (2.2.53-10) unstable; urgency=medium
 
   * Add missing include for dpkg architecture.mk.

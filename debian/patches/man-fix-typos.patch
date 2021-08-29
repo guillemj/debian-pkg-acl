@@ -6,23 +6,11 @@ Last-Update: 2019-02-16
 
 ---
  man/man1/chacl.1         |    8 ++++----
- man/man1/getfacl.1       |    2 +-
  man/man3/acl_from_text.3 |    2 +-
  man/man3/acl_to_text.3   |    2 +-
  man/man5/acl.5           |    6 ++++--
- 5 files changed, 11 insertions(+), 9 deletions(-)
+ 4 files changed, 10 insertions(+), 8 deletions(-)
 
---- a/man/man1/getfacl.1
-+++ b/man/man1/getfacl.1
-@@ -162,7 +162,7 @@ If the environment variable POSIXLY_CORR
- option is given. If no command line parameter is given,
- .I getfacl
- behaves as if it was invoked as ``getfacl \-''.
--No flags comments indicating the setuid, setgit, and sticky bits are generated.
-+No flags comments indicating the setuid, setgid, and sticky bits are generated.
- .SH AUTHOR
- Andreas Gruenbacher,
- .RI < a.gruenbacher@bestbits.at >.
 --- a/man/man5/acl.5
 +++ b/man/man5/acl.5
 @@ -109,7 +109,7 @@ to the permissions of the ACL_USER_OBJ e
