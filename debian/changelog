@@ -1,4 +1,4 @@
-acl (2.3.1-1) UNRELEASED; urgency=medium
+acl (2.3.1-1) unstable; urgency=medium
 
   * New upstream release.
     - Remove upstream patches included in this release.
@@ -6,7 +6,7 @@ acl (2.3.1-1) UNRELEASED; urgency=medium
     - Update upstream signing key.
   * Add support for the noudeb build profile.
 
- -- Guillem Jover <guillem@debian.org>  Fri, 09 Apr 2021 02:42:48 +0200
+ -- Guillem Jover <guillem@debian.org>  Sun, 29 Aug 2021 16:26:27 +0200
 
 acl (2.2.53-10) unstable; urgency=medium
 
