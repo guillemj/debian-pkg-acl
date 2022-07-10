@@ -10,7 +10,7 @@ Build-Depends:
  gettext,
  libtool,
  libattr1-dev (>= 1:2.4.46-8),
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Homepage: https://savannah.nongnu.org/projects/acl/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/acl.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/acl.git
