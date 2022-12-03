@@ -1,7 +1,7 @@
 Description: Fix usage of uninitialized variable.
 Author: Vasily Gurevich <vas.gurevich@gmail.com>
 Bug-Debian: https://bugs.debian.org/612599
-Forwarded: no
+Forwarded: yes
 Last-Update: 2020-03-01
 
 ---
