@@ -2,6 +2,8 @@ acl (2.3.1-2) UNRELEASED; urgency=medium
 
   * Switch to Standards-Version 4.6.1 (no changes needed).
   * Override lintian false positive for hardening-no-fortify-functions hint.
+  * Reduce code comments in patches/build-cross-gettext-musl.patch to the
+    minimal understandable text.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 14 Apr 2022 13:47:35 +0200
 
