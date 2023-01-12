@@ -5,6 +5,7 @@ Maintainer: Guillem Jover <guillem@debian.org>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
+ debhelper (>= 13.10),
  autoconf,
  automake,
  gettext,

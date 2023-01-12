@@ -28,4 +28,4 @@ endif
 	$(if $(TESTS_FLAKY),-)dh_auto_test
 
 override_dh_installchangelogs:
-	dh_installchangelogs doc/CHANGES
+	dh_installchangelogs --no-trim doc/CHANGES
