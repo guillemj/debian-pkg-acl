@@ -1,1 +1,2 @@
-usr/lib/*/*.so.*
+usr/lib/*/libacl.so.1
+usr/lib/*/libacl.so.1.*
