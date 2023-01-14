@@ -7,8 +7,9 @@ Description: Fix cross-compilation on musl-based systems.
  AM_GNU_GETTEXT_REQUIRE_VERSION macro which requires at least a specific
  version, and bump the AM_GNU_GETTEXT_VERSION to the first one that had
  support for the new macro.
-Forwarded: yes
 Origin: vendor
+Forwarded: yes
+Applied-Upstream: 2.3.1+, commit:97a8a4fbda04af2c6f9a1cfc95eb780ae9fe36d8
 
 ---
  configure.ac |    8 +++++++-

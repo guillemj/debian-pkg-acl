@@ -1,6 +1,8 @@
 Author: Jean-Philippe MENGUAL <jpmengual@debian.org>
 Description: Update French translation
+Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.3.1+, commit:8ff17241f40cb4dd26a0ebe5c6bf3d11237f681c
 
 ---
  po/fr.po |  287 +++++++++++++++++++++++++++++++--------------------------------

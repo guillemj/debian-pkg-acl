@@ -2,6 +2,7 @@ Description: Typo fixes
 Author: Guillem Jover <guillem@debian.org>
 Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.3.1+, commit:f1dc2043c5e240c97a67aa0d9129900ca75a8dd8
 Last-Update: 2019-02-16
 
 ---

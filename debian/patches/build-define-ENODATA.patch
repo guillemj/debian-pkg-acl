@@ -2,7 +2,9 @@ Author: Guillem Jover <guillem@debian.org>
 Description: On GNU/kFreeBSD ENODATA is not defined.
  We need to define it to ENOATTR instead which is defined. This is a
  regression from the upstream build system modernization.
+Origin: vendor
 Forwarded: yes
+Applied-Upstream: 2.3.1+, commit:79cebdbea8d8c7d8b89ebbd5d259d341139dec01
 
 
 ---

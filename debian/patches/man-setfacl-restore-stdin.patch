@@ -3,7 +3,8 @@ Author: Guillem Jover <guillem@debian.org>
 Bug-Debian: https://bugs.debian.org/544716
 Origin: vendor
 Forwarded: yes
-Last-Modified: 2019-02-28
+Applied-Upstream: 2.3.1+, commit:53f267f4f315707ac25f4b5201d0e393cece4b7a
+Last-Update: 2019-02-28
 
 
 ---
