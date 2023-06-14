@@ -1,6 +1,6 @@
 Tests: test-build
 Restrictions: superficial
-Depends: build-essential, pkg-config, libacl1-dev
+Depends: build-essential, pkgconf, libacl1-dev
 
 Tests: test-func
 Restrictions: flaky rw-build-tree
