@@ -3,8 +3,8 @@ set -e
 
 if [ "$1" = 'remove' ]; then
   for file in chacl getfacl setfacl; do
-    if [ -L /usr/bin/$file ]; then
-      rm /usr/bin/$file
+    if [ -L /bin/$file ]; then
+      rm /bin/$file
     fi
   done
 fi

@@ -1,3 +1,10 @@
+acl (2.3.1-5) UNRELEASED; urgency=medium
+
+  * Move programs to their canonical location under /usr, and flip the
+    direction of the backward compatibility symlinks. Closes: #1060156
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 04 Jan 2024 23:51:24 +0100
+
 acl (2.3.1-4) unstable; urgency=medium
 
   * Switch autopkgtest dependency from pkg-config to pkgconf.
