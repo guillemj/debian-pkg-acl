@@ -1,8 +1,8 @@
-acl (2.3.1-6) UNRELEASED; urgency=medium
+acl (2.3.1-6) unstable; urgency=medium
 
   * Take DPKG_ROOT into account in maintainer scripts.
 
- -- Guillem Jover <guillem@debian.org>  Tue, 16 Jan 2024 04:32:13 +0100
+ -- Guillem Jover <guillem@debian.org>  Tue, 16 Jan 2024 04:32:54 +0100
 
 acl (2.3.1-5) experimental; urgency=medium
 
