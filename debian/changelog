@@ -1,6 +1,7 @@
 acl (2.3.2-3) UNRELEASED; urgency=medium
 
   * Remove «Rules-Requires-Root: no», which is the current default.
+  * Remove «Priority: optional», which is the current default.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:48:34 +0200
 
