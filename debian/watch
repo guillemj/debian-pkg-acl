@@ -1,3 +1,6 @@
-version=4
-opts=pgpsigurlmangle=s/$/.sig/ \
-https://download.savannah.gnu.org/releases/acl/acl-(\d.*?)(?:\.src)?\.(?:tgz|tbz2|txz|tar\.(?:gz|bz2|xz))
+Version: 5
+
+Source: https://download.savannah.gnu.org/releases/acl/
+Matching-Pattern: acl-(\d.*?)(?:\.src)?\.(?:tgz|tbz2|txz|tar\.(?:gz|bz2|xz))
+Pgp-Sig-Url-Mangle: s/$/.sig/
+Update-Script: uupdate
