@@ -1,4 +1,4 @@
-acl (2.3.2-3) UNRELEASED; urgency=medium
+acl (2.3.2-3) unstable; urgency=medium
 
   * Remove «Rules-Requires-Root: no», which is the current default.
   * Remove «Priority: optional», which is the current default.
@@ -10,7 +10,7 @@ acl (2.3.2-3) UNRELEASED; urgency=medium
   * Fix examples build instructions and Makefile to make them work.
   * Install examples in libacl1-dev.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:48:34 +0200
+ -- Guillem Jover <guillem@debian.org>  Sun, 15 Feb 2026 13:55:25 +0100
 
 acl (2.3.2-2) unstable; urgency=medium
 
