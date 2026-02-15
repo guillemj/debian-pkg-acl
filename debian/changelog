@@ -5,6 +5,7 @@ acl (2.3.2-3) UNRELEASED; urgency=medium
   * Switch to debian/watch version 5.
   * Add spaces around make assignment operators to distinguish from shell ones.
   * Remove unused lintian overrides for hardening-no-fortify-functions.
+  * Switch to Standards-Version 4.7.3 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:48:34 +0200
 
