@@ -1,0 +1,24 @@
+From f5f206e7520540a96a73062d267605698503855b Mon Sep 17 00:00:00 2001
+From: Guillem Jover <guillem@hadrons.org>
+Date: Sun, 15 Feb 2026 13:48:06 +0100
+Subject: [PATCH acl] build: Use LDLIBS instead of LDFLAGS for example Makefile
+
+Signed-off-by: Guillem Jover <guillem@hadrons.org>
+---
+ examples/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/examples/Makefile b/examples/Makefile
+index 74642ca..2356aaf 100644
+--- a/examples/Makefile
++++ b/examples/Makefile
+@@ -1,5 +1,5 @@
+ CFLAGS = -g -Wall -I../include
+-LDFLAGS = -lacl
++LDLIBS = -lacl
+ 
+ PROGS = get-acl copy-acl set-acl copyperm
+ 
+-- 
+2.51.0
+

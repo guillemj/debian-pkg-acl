@@ -1,0 +1,26 @@
+From ae0448cb7d0d328440425d1ac347e9d6845e3f0e Mon Sep 17 00:00:00 2001
+From: Manuel Jacob <me@manueljacob.de>
+Date: Sat, 17 Jan 2026 10:13:24 +0100
+Subject: [PATCH acl] Fix reference to renamed `Makefile.examples`
+
+It was renamed to `Makefile` in c8f23c92177c5a82ab3699b1b0d4acbee9afb770.
+---
+ examples/README | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/examples/README b/examples/README
+index 09a3678..c9f6661 100644
+--- a/examples/README
++++ b/examples/README
+@@ -5,7 +5,7 @@ This directory contains very simple examples of how to use the acl
+ library. After installing the acl library on your system, you can
+ build the examples by typing the following command in this directory:
+ 
+-  make -f Makefile.examples
++  make
+ 
+ 
+  --Andreas Gruenbacher.
+-- 
+2.51.0
+

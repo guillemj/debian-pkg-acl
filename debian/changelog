@@ -7,6 +7,7 @@ acl (2.3.2-3) UNRELEASED; urgency=medium
   * Remove unused lintian overrides for hardening-no-fortify-functions.
   * Switch to Standards-Version 4.7.3 (no changes needed).
   * Reorganize patches by upstream and local provenance.
+  * Fix examples build instructions and Makefile to make them work.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:48:34 +0200
 

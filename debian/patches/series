@@ -1,4 +1,6 @@
 # Upstream patches
 upstream/0001-libmisc-__acl_get_uid-fix-memory-wasting-loop-if-use.patch
+upstream/0001-Fix-reference-to-renamed-Makefile.examples.patch
 # Local patches
+local/0001-build-Use-LDLIBS-instead-of-LDFLAGS-for-example-Make.patch
 local/getfacl-fix-uninitialized-variable.patch
