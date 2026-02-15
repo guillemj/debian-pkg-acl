@@ -6,6 +6,7 @@ acl (2.3.2-3) UNRELEASED; urgency=medium
   * Add spaces around make assignment operators to distinguish from shell ones.
   * Remove unused lintian overrides for hardening-no-fortify-functions.
   * Switch to Standards-Version 4.7.3 (no changes needed).
+  * Reorganize patches by upstream and local provenance.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 10 Aug 2025 19:48:34 +0200
 
