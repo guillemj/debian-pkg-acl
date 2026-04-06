@@ -3,10 +3,7 @@ Section: utils
 Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends:
  debhelper-compat (= 13),
- autoconf,
- automake,
  gettext,
- libtool,
  libattr1-dev (>= 1:2.4.46-8),
 Standards-Version: 4.7.3
 Homepage: https://savannah.nongnu.org/projects/acl/

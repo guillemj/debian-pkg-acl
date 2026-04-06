@@ -2,6 +2,8 @@ acl (2.3.2-4) UNRELEASED; urgency=medium
 
   * Remove build dependency on debhelper (>= 13.10) implied by
     debhelper-compat (= 13) since Debian bookworm.
+  * Remove build dependencies on automake, autoconf and libtool implied
+    by debhelper-compat (>= 10) since Debian stretch.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 06 Apr 2026 17:55:07 +0200
 
