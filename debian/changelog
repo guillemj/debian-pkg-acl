@@ -4,6 +4,7 @@ acl (2.3.2-4) UNRELEASED; urgency=medium
     debhelper-compat (= 13) since Debian bookworm.
   * Remove build dependencies on automake, autoconf and libtool implied
     by debhelper-compat (>= 10) since Debian stretch.
+  * Switch to Standards-Version 4.7.4 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Mon, 06 Apr 2026 17:55:07 +0200
 
