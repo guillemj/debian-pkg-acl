@@ -9,6 +9,7 @@ Standards-Version: 4.7.4
 Homepage: https://savannah.nongnu.org/projects/acl/
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/acl.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/acl.git
+Description: access control list
 
 Package: acl
 Architecture: any
@@ -17,7 +18,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  libacl1 (= ${binary:Version}),
-Description: access control list - utilities
+Description: ${source:Synopsis} - utilities
  This package contains the getfacl and setfacl utilities needed for
  manipulating access control lists. It also contains the chacl IRIX
  compatible utility.
@@ -37,7 +38,7 @@ Replaces:
  acl-dev,
 Conflicts:
  acl-dev,
-Description: access control list - static libraries and headers
+Description: ${source:Synopsis} - static libraries and headers
  This package contains the static libraries and header files needed
  for developing programs which make use of the access control list
  programming interface defined in POSIX 1003.1e draft standard 17.
@@ -51,7 +52,7 @@ Pre-Depends:
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Description: access control list - shared library
+Description: ${source:Synopsis} - shared library
  This package contains the shared library containing the POSIX 1003.1e
  draft standard 17 functions for manipulating access control lists.
 
@@ -64,7 +65,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends},
  libacl1-udeb (= ${binary:Version}),
-Description: access control list - udeb utilities
+Description: ${source:Synopsis} - udeb utilities
 
 Package: libacl1-udeb
 Package-Type: udeb
@@ -74,4 +75,4 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Description: access control list - udeb shared library
+Description: ${source:Synopsis} - udeb shared library
